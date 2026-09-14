@@ -44,7 +44,7 @@ export interface SourceCitation {
 export interface ClaimRecord {
   id: string;
   text: string;
-  category: "botany" | "nutrition" | "history" | "culture" | "agriculture" | "safety";
+  category: "botany" | "nutrition" | "history" | "culture" | "agriculture" | "safety" | "ecology";
   evidence: EvidenceLevel;
   sources: SourceCitation[];
   editorialStatus: EditorialStatus;
@@ -108,6 +108,46 @@ export interface PlantRecord {
   editorialStatus: EditorialStatus;
   relatedSongs: string[];
   relatedEpisodes: string[];
+}
+
+export type AnimalKind =
+  | "fish"
+  | "mammal"
+  | "bird"
+  | "insect"
+  | "reptile"
+  | "amphibian"
+  | "invertebrate";
+
+export type AnimalHabitat =
+  | "ocean"
+  | "reef"
+  | "river"
+  | "wetland"
+  | "forest"
+  | "garden"
+  | "farm"
+  | "savanna"
+  | "polar"
+  | "sky"
+  | "soil";
+
+export interface AnimalRecord {
+  slug: string;
+  commonName: string;
+  scientificName: string;
+  kind: AnimalKind;
+  habitat: AnimalHabitat;
+  nativeRange: string;
+  mapRegion: string;
+  diet: string;
+  connected: string;
+  childFact: string;
+  safety: string;
+  conservation: string;
+  names: string[];
+  editorialStatus: EditorialStatus;
+  claims: ClaimRecord[];
 }
 
 export interface LyricLine {

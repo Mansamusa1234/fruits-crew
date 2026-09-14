@@ -1,3 +1,4 @@
+import { animals } from "./animals";
 import { characters } from "./characters";
 import { plants } from "./plants";
 import { songs } from "./songs";
@@ -5,7 +6,7 @@ import { episodes } from "./episodes";
 import { activities } from "./activities";
 
 export interface SearchHit {
-  kind: "character" | "plant" | "song" | "episode" | "activity";
+  kind: "character" | "plant" | "animal" | "song" | "episode" | "activity";
   title: string;
   href: string;
   blurb: string;
@@ -36,6 +37,17 @@ export function searchContent(q: string): SearchHit[] {
         title: p.commonName,
         href: `/plants/${p.slug}`,
         blurb: p.scientificName,
+      });
+    }
+  }
+  for (const a of animals) {
+    const blob = `${a.commonName} ${a.scientificName} ${a.kind} ${a.habitat} ${a.connected}`.toLowerCase();
+    if (blob.includes(needle)) {
+      hits.push({
+        kind: "animal",
+        title: a.commonName,
+        href: `/animals/${a.slug}`,
+        blurb: a.connected,
       });
     }
   }

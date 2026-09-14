@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Play, Shield } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { animals } from "@/lib/content/animals";
 import { characters } from "@/lib/content/characters";
 import { plants } from "@/lib/content/plants";
 import { songs } from "@/lib/content/songs";
@@ -156,6 +157,33 @@ function Home() {
             >
               <h3 className="font-display text-xl">{p.commonName}</h3>
               <p className="text-sm italic text-muted">{p.scientificName}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 pb-14">
+        <div className="mb-6 flex items-end justify-between">
+          <h2 className="font-display text-3xl">Fish, birds, bees and the whole living world</h2>
+          <Link to="/animals" className="text-sm font-semibold text-primary">
+            {animals.length} animals
+          </Link>
+        </div>
+        <p className="mb-4 max-w-2xl text-muted">
+          There are more species than any one site can hold. This is a worldwide family to start —
+          oceans, rivers, soil and sky — each one connected to the plants.
+        </p>
+        <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          {animals.slice(0, 8).map((a) => (
+            <Link
+              key={a.slug}
+              to="/animals/$slug"
+              params={{ slug: a.slug }}
+              className="rounded-[20px] bg-white p-4 shadow-soft"
+            >
+              <p className="text-xs uppercase tracking-wide text-subtle">{a.kind}</p>
+              <h3 className="font-display text-xl">{a.commonName}</h3>
+              <p className="text-sm italic text-muted">{a.scientificName}</p>
             </Link>
           ))}
         </div>

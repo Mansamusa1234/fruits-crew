@@ -12,11 +12,14 @@ const NAV = [
   { to: "/watch", key: "navWatch" },
   { to: "/sing", key: "navSing" },
   { to: "/farm", key: "navFarm" },
+  { to: "/animals", key: "navAnimals" },
+  { to: "/plants", key: "navPlants" },
   { to: "/parents", key: "navParents" },
 ] as const;
 
 const FOOT_LEFT = [
   { to: "/about", label: "About" },
+  { to: "/animals", label: "Animals" },
   { to: "/press", label: "Press" },
   { to: "/partners", label: "Partners" },
   { to: "/faq", label: "FAQs" },
