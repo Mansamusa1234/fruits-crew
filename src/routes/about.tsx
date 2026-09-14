@@ -15,6 +15,12 @@ function AboutPage() {
         Core message: Everything is connected. Each one teach one. Learn together. Grow together.
         Love one another.
       </p>
+      <H>From a seed</H>
+      <p>
+        All that grew, grew from seed. God made living things with seed, so life can grow again.
+        Little Seed carries that gift: a mango holds a seed, a seed holds a tree, a tree holds fruit,
+        fruit holds another seed. Everything is connected.
+      </p>
       <H>Creator</H>
       <p>Created by Darren-neil. Original characters, songs and stories.</p>
       <H>Who this website is for</H>
@@ -28,6 +34,8 @@ function AboutPage() {
         <li>Stories to watch</li>
         <li>Original songs to sing</li>
         <li>A living farm where plants grow</li>
+        <li>Animals of sea, soil and sky</li>
+        <li>The seed story — God made living things with seed</li>
         <li>Plant records with sources</li>
         <li>Family activities away from the screen</li>
       </ul>

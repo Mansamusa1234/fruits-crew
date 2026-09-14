@@ -7,8 +7,8 @@ function FarmPage() {
   return (
     <main className="mx-auto max-w-6xl px-3 py-6 sm:px-4 sm:py-10">
       <p className="px-1 text-sm text-muted">
-        A real working farm: raised beds, drip lines, rainwater tank, polytunnel, compost bays and a
-        family table. Seeds grow if water and light come in the right amount.
+        God made living things with seed. Plant one. Call the rain. Call the sun. Watch a gift grow:
+        raised beds, drip lines, rainwater tank, polytunnel, compost and a family table.
       </p>
       <div className="mt-5">
         <LivingFarm />

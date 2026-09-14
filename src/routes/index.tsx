@@ -44,6 +44,22 @@ function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12">
+        <div className="rounded-[28px] bg-white p-6 shadow-soft sm:p-8">
+          <p className="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">From a seed</p>
+          <h2 className="mt-2 font-display text-3xl">God made living things with seed</h2>
+          <p className="mt-3 max-w-2xl text-lg text-muted">
+            All that grew, grew from seed. A mango holds a seed. A seed holds a tree. A tree holds
+            fruit. Fruit holds another seed. That is how tomorrow is packed inside today.
+          </p>
+          <p className="mt-4">
+            <Link to="/from-a-seed" className="font-semibold text-leaf">
+              Read Little Seed’s story
+            </Link>
+          </p>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12">
         <div className="overflow-hidden rounded-[28px] bg-black shadow-soft">
           <video
             className="aspect-video w-full object-cover"
