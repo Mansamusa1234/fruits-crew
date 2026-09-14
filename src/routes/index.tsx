@@ -9,12 +9,19 @@ import { TalkingWorld } from "@/components/world/TalkingWorld";
 
 export const Route = createFileRoute("/")({ component: Home });
 
+const ANIMAL_ART: Record<string, string> = {
+  honeybee: "/world/bee.jpg?v=hq1",
+  monarch: "/world/butterfly.jpg?v=hq1",
+  earthworm: "/world/worm.jpg?v=hq1",
+  clownfish: "/world/clownfish.jpg?v=hq1",
+};
+
 function Home() {
   return (
     <main>
       <section className="relative overflow-hidden">
         <img
-          src="/scenes/garden-hero.jpg"
+          src="/scenes/garden-hero.jpg?v=hq1"
           alt="Original Fruits Crew characters in a sunlit worldwide garden"
           className="h-[min(88vh,820px)] w-full object-cover object-[center_20%]"
         />
@@ -103,7 +110,7 @@ function Home() {
               params={{ slug: c.slug }}
               className="kid-card overflow-hidden rounded-[28px] bg-white shadow-soft"
             >
-              <img src={c.portrait} alt={c.accessibilityDescription} className="aspect-square w-full object-cover bob" />
+              <img src={`${c.portrait}?v=hq1`} alt={c.accessibilityDescription} className="aspect-square w-full object-cover bob" />
               <div className="p-3">
                 <h3 className="font-display text-lg">{c.name}</h3>
               </div>
@@ -194,7 +201,7 @@ function Home() {
           oceans, rivers, soil and sky — each one connected to the plants.
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {["honeybee", "monarch", "earthworm", "atlantic-salmon", "blue-whale", "clownfish", "toucan", "frog"]
+          {["honeybee", "monarch", "earthworm", "clownfish", "atlantic-salmon", "blue-whale", "toucan", "frog"]
             .map((slug) => animals.find((a) => a.slug === slug))
             .filter((a): a is NonNullable<typeof a> => Boolean(a))
             .map((a) => (
@@ -202,11 +209,16 @@ function Home() {
               key={a.slug}
               to="/animals/$slug"
               params={{ slug: a.slug }}
-              className="kid-card rounded-[24px] bg-white p-4"
+              className="kid-card overflow-hidden rounded-[24px] bg-white"
             >
+              {ANIMAL_ART[a.slug] ? (
+                <img src={ANIMAL_ART[a.slug]} alt="" className="aspect-square w-full object-cover" />
+              ) : null}
+              <div className="p-4">
               <p className="text-xs uppercase tracking-wide text-subtle">{a.kind}</p>
               <h3 className="font-display text-xl">{a.commonName}</h3>
               <p className="text-sm italic text-muted">{a.scientificName}</p>
+              </div>
             </Link>
           ))}
         </div>
