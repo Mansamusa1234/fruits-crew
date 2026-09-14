@@ -13,7 +13,7 @@ function AboutPage() {
       </p>
       <p>
         Core message: Everything is connected. Each one teach one. Learn together. Grow together.
-        Love one another.
+        Love one another. Every living thing plays a part in this ecosystem.
       </p>
       <H>From a seed</H>
       <p>

@@ -26,8 +26,8 @@ function AnimalsPage() {
       <h1 className="font-display text-4xl">Living world</h1>
       <p className="mt-3 max-w-2xl text-muted">
         Earth has more than a million named animal species. Fruits Crew starts with a worldwide family
-        children can learn — {animals.length} lives, including {fish} fish — connected to plants, soil
-        and water. This catalogue grows.
+        children can learn — {animals.length} lives, including {fish} fish — each one with a part to
+        play. The worm, the bee, the whale, the child: one ecosystem. This catalogue grows.
       </p>
       <div className="mt-6 rounded-[20px] bg-white p-4 text-sm shadow-soft">
         Wild animals are not toys. Look with an adult. Never chase, grab or feed a wild animal.

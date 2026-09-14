@@ -49,7 +49,8 @@ function Home() {
           <h2 className="mt-2 font-display text-3xl">God made living things with seed</h2>
           <p className="mt-3 max-w-2xl text-lg text-muted">
             All that grew, grew from seed. A mango holds a seed. A seed holds a tree. A tree holds
-            fruit. Fruit holds another seed. That is how tomorrow is packed inside today.
+            fruit. Fruit holds another seed. That is how tomorrow is packed inside today. Every
+            living thing plays a part in this ecosystem.
           </p>
           <p className="mt-4">
             <Link to="/from-a-seed" className="font-semibold text-leaf">

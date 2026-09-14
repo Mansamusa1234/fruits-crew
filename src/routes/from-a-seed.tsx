@@ -15,8 +15,9 @@ function FromASeedPage() {
         That is how a garden remembers tomorrow.
       </p>
       <p className="mt-4 text-muted">
-        Animals have families too — eggs, milk, care. Plants and animals, soil and rain, sun and
-        child: one living world. Everything is connected.
+        Every living thing plays a part in this ecosystem. The worm turns the soil. The bee visits
+        the flower. The fish cleans the river. The child plants a seed. Nothing is extra. Nothing is
+        alone.
       </p>
       <blockquote className="mt-8 rounded-[24px] bg-white p-6 text-xl shadow-soft">
         “God put a tomorrow inside me.”
