@@ -18,6 +18,8 @@ export const songs: SongRecord[] = [
     durationSec: 48,
     relatedEpisode: "wake-up-little-seed",
     audioUrl: "/audio/everything-is-connected.mp3",
+    poster: "/songs/everything-talks.jpg",
+    videoUrl: "/watch/everything-talks.mp4",
     danceSteps: [
       "Circle step in for four counts",
       "Reach up like a sprout",
@@ -53,6 +55,8 @@ export const songs: SongRecord[] = [
     durationSec: 42,
     relatedEpisode: "wake-up-little-seed",
     audioUrl: "/audio/wake-up-little-seed.mp3",
+    poster: "/songs/wake-up-little-seed.jpg",
+    videoUrl: "/watch/wake-up-little-seed.mp4",
     danceSteps: ["Curl small", "Root arm down", "Shoot arm up", "Turn toward a window"],
     lyrics: [
       { t: 0, role: "child", text: "I am waiting in the dark" },
