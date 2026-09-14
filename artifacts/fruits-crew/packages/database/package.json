@@ -1,0 +1,19 @@
+{
+  "name": "@fruits-crew/database",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./src/index.ts",
+  "types": "./src/index.ts",
+  "scripts": {
+    "generate": "echo 'Link Supabase project and run supabase gen types'",
+    "migrate": "echo 'Run supabase db push or migration scripts'",
+    "seed": "tsx seed/index.ts"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.45.4"
+  },
+  "devDependencies": {
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2"
+  }
+}

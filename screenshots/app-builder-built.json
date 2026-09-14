@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Fruits Crew",
+      "hasCanvas": false,
+      "bodyTextLen": 3766,
+      "bodyTextHash": "9be99e2288a607e8d069d5cb52026d170032496f9814935d0c9b3c817101f585",
+      "bodyTextPrefix": "Skip to content Fruits Crew Meet the Crew Plants Watch Sing Map ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Fruits Crew",
+      "hasCanvas": false,
+      "bodyTextLen": 3720,
+      "bodyTextHash": "d0b5a691616b9ff20532ec038387214e6b1f9fb839c3c33512cc0f4d9cd2ca03",
+      "bodyTextPrefix": "Skip to content Fruits Crew Menu FRUITS CREW The whole living wo",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

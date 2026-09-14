@@ -497,5 +497,5 @@ export function songPack(slug: string, locale: Locale): SongLocalePack | null {
 }
 
 export function songAudioUrl(slug: string, locale: Locale) {
-  return `/audio/${locale}/${slug}.mp3`;
+  return `/audio/${locale}/${slug}.mp3?v=music2`;
 }

@@ -1,0 +1,1471 @@
+import { i as __toESM } from "./_runtime.mjs";
+import { t as cn } from "./_ssr/cn-Ccejyh36.mjs";
+import { n as require_react } from "./_libs/@radix-ui/react-compose-refs+[...].mjs";
+import { b as require_jsx_runtime, v as Link, z as notFound } from "./_libs/@tanstack/react-router+[...].mjs";
+import { l as Play, n as Volume2, u as Pause } from "./_libs/lucide-react.mjs";
+import { l as useLanguage, o as LanguagePicker, r as Route$2, s as Button } from "./_ssr/router-D-7YjPqO.mjs";
+import { t as getSong } from "./_ssr/songs-CbMbfwRj.mjs";
+//#region node_modules/.nitro/vite/services/ssr/assets/_slug-30FlBElS.js
+var import_react = /* @__PURE__ */ __toESM(require_react());
+var import_jsx_runtime = require_jsx_runtime();
+var songI18n = {
+	"everything-is-connected": {
+		en: {
+			title: "Everything Is Connected",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "Come closer — the garden is waking!"
+				},
+				{
+					t: 5,
+					role: "chorus",
+					text: "Sun and rain and root and seed"
+				},
+				{
+					t: 10,
+					role: "child",
+					text: "Why does the rain need the root?"
+				},
+				{
+					t: 16,
+					role: "adult",
+					text: "Water travels. Roots hold out their hands!"
+				},
+				{
+					t: 22,
+					role: "chorus",
+					text: "Everything is connected — each one teach one!"
+				},
+				{
+					t: 28,
+					role: "grandparent",
+					text: "What you cannot see still holds you."
+				},
+				{
+					t: 34,
+					role: "chorus",
+					text: "Grow your mind, share the sun. Learn in harmony!"
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "Come closer, little listener! The garden is waking! Sun and rain and root and seed — every living thing we need!"
+				},
+				{
+					role: "child",
+					text: "Ooh — why does the rain need the root?"
+				},
+				{
+					role: "adult",
+					text: "Ah, because water travels, and the roots hold out their hands! Like this!"
+				},
+				{
+					role: "chorus",
+					text: "Everything is connected! Each one teach one!"
+				},
+				{
+					role: "grandparent",
+					text: "Soft now. What you cannot see still holds you."
+				},
+				{
+					role: "chorus",
+					text: "Grow your mind! Share the sun! Learn in harmony, everyone! Everything is connected!"
+				}
+			]
+		},
+		es: {
+			title: "Todo está conectado",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "¡Ven — el jardín se despierta!"
+				},
+				{
+					t: 5,
+					role: "chorus",
+					text: "Sol y lluvia, raíz y semilla"
+				},
+				{
+					t: 10,
+					role: "child",
+					text: "¿Por qué la lluvia necesita la raíz?"
+				},
+				{
+					t: 16,
+					role: "adult",
+					text: "¡El agua viaja. Las raíces tienden las manos!"
+				},
+				{
+					t: 22,
+					role: "chorus",
+					text: "¡Todo está conectado — cada uno enseña a uno!"
+				},
+				{
+					t: 28,
+					role: "grandparent",
+					text: "Lo que no puedes ver aún te sostiene."
+				},
+				{
+					t: 34,
+					role: "chorus",
+					text: "¡Crece tu mente, comparte el sol!"
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "¡Ven, ven, pequeño oyente! ¡El jardín se despierta! Sol y lluvia, raíz y semilla — todo ser vivo que necesitamos!"
+				},
+				{
+					role: "child",
+					text: "¿Por qué la lluvia necesita la raíz?"
+				},
+				{
+					role: "adult",
+					text: "Porque el agua viaja, y las raíces tienden las manos. ¡Mira!"
+				},
+				{
+					role: "chorus",
+					text: "¡Todo está conectado! ¡Cada uno enseña a uno!"
+				},
+				{
+					role: "grandparent",
+					text: "Despacio. Lo que no puedes ver aún te sostiene."
+				},
+				{
+					role: "chorus",
+					text: "¡Crece tu mente! ¡Comparte el sol! ¡Aprendan en armonía! ¡Todo está conectado!"
+				}
+			]
+		},
+		fr: {
+			title: "Tout est lié",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "Viens — le jardin s’éveille !"
+				},
+				{
+					t: 5,
+					role: "chorus",
+					text: "Soleil et pluie, racine et graine"
+				},
+				{
+					t: 10,
+					role: "child",
+					text: "Pourquoi la pluie a-t-elle besoin de la racine ?"
+				},
+				{
+					t: 16,
+					role: "adult",
+					text: "L’eau voyage. Les racines tendent les mains !"
+				},
+				{
+					t: 22,
+					role: "chorus",
+					text: "Tout est lié — chacun enseigne à chacun !"
+				},
+				{
+					t: 28,
+					role: "grandparent",
+					text: "Ce que tu ne vois pas te porte encore."
+				},
+				{
+					t: 34,
+					role: "chorus",
+					text: "Grandis ton esprit, partage le soleil !"
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "Viens, viens, petit écouteur ! Le jardin s’éveille ! Soleil et pluie, racine et graine — tout ce qui vit, tout ce qu’il nous faut !"
+				},
+				{
+					role: "child",
+					text: "Pourquoi la pluie a-t-elle besoin de la racine ?"
+				},
+				{
+					role: "adult",
+					text: "Parce que l’eau voyage, et les racines tendent les mains. Comme ça !"
+				},
+				{
+					role: "chorus",
+					text: "Tout est lié ! Chacun enseigne à chacun !"
+				},
+				{
+					role: "grandparent",
+					text: "Doucement. Ce que tu ne vois pas te porte encore."
+				},
+				{
+					role: "chorus",
+					text: "Grandis ton esprit ! Partage le soleil ! Apprenez en harmonie ! Tout est lié !"
+				}
+			]
+		},
+		jam: {
+			title: "Everything Connect",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "Come closer — di garden a wake!"
+				},
+				{
+					t: 5,
+					role: "chorus",
+					text: "Sun an rain an root an seed"
+				},
+				{
+					t: 10,
+					role: "child",
+					text: "Why de rain need de root?"
+				},
+				{
+					t: 16,
+					role: "adult",
+					text: "Water travel. Root hold out dem hand!"
+				},
+				{
+					t: 22,
+					role: "chorus",
+					text: "Everything connect — each one teach one!"
+				},
+				{
+					t: 28,
+					role: "grandparent",
+					text: "What you cyaan see still hold you."
+				},
+				{
+					t: 34,
+					role: "chorus",
+					text: "Grow yu mind, share di sun!"
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "Come closer, likkle listener! Di garden a wake! Sun an rain an root an seed — every living ting we need!"
+				},
+				{
+					role: "child",
+					text: "Why de rain need de root?"
+				},
+				{
+					role: "adult",
+					text: "Because water travel, and di roots hold out dem hand! Look ya!"
+				},
+				{
+					role: "chorus",
+					text: "Everything connect! Each one teach one!"
+				},
+				{
+					role: "grandparent",
+					text: "Easy now. What you cyaan see still hold you."
+				},
+				{
+					role: "chorus",
+					text: "Grow yu mind! Share di sun! Learn in harmony, everyone! Everything connect!"
+				}
+			]
+		}
+	},
+	"wake-up-little-seed": {
+		en: {
+			title: "Wake Up, Little Seed",
+			lyrics: [
+				{
+					t: 0,
+					role: "child",
+					text: "I am waiting in the dark…"
+				},
+				{
+					t: 6,
+					role: "adult",
+					text: "Rain is coming — that is the spark!"
+				},
+				{
+					t: 12,
+					role: "chorus",
+					text: "Wake up, Little Seed!"
+				},
+				{
+					t: 18,
+					role: "grandparent",
+					text: "Slow is still growing."
+				},
+				{
+					t: 24,
+					role: "chorus",
+					text: "Down to drink and up to see!"
+				},
+				{
+					t: 30,
+					role: "child",
+					text: "I think I feel the sun on me!"
+				}
+			],
+			spoken: [
+				{
+					role: "child",
+					text: "Shhh. I am waiting in the dark. Is it time?"
+				},
+				{
+					role: "adult",
+					text: "Yes! Rain is coming — that is the spark!"
+				},
+				{
+					role: "chorus",
+					text: "Wake up, Little Seed! Stretch your root, find the light you need!"
+				},
+				{
+					role: "grandparent",
+					text: "Remember: slow is still growing."
+				},
+				{
+					role: "chorus",
+					text: "Down to drink — and up to see! Wake up, Little Seed!"
+				},
+				{
+					role: "child",
+					text: "Oh! I think I feel the sun on me!"
+				}
+			]
+		},
+		es: {
+			title: "Despierta, Pequeña Semilla",
+			lyrics: [
+				{
+					t: 0,
+					role: "child",
+					text: "Espero en la oscuridad…"
+				},
+				{
+					t: 6,
+					role: "adult",
+					text: "¡Llega la lluvia — esa es la chispa!"
+				},
+				{
+					t: 12,
+					role: "chorus",
+					text: "¡Despierta, Pequeña Semilla!"
+				},
+				{
+					t: 18,
+					role: "grandparent",
+					text: "Despacio también es crecer."
+				},
+				{
+					t: 24,
+					role: "chorus",
+					text: "¡Abajo a beber, arriba a ver!"
+				},
+				{
+					t: 30,
+					role: "child",
+					text: "¡Siento el sol sobre mí!"
+				}
+			],
+			spoken: [
+				{
+					role: "child",
+					text: "Shhh. Espero en la oscuridad. ¿Ya es hora?"
+				},
+				{
+					role: "adult",
+					text: "¡Sí! Llega la lluvia — esa es la chispa!"
+				},
+				{
+					role: "chorus",
+					text: "¡Despierta, Pequeña Semilla! Estira tu raíz, busca la luz!"
+				},
+				{
+					role: "grandparent",
+					text: "Recuerda: despacio también es crecer."
+				},
+				{
+					role: "chorus",
+					text: "Abajo a beber, y arriba a ver! ¡Despierta, Pequeña Semilla!"
+				},
+				{
+					role: "child",
+					text: "¡Ay! ¡Siento el sol sobre mí!"
+				}
+			]
+		},
+		fr: {
+			title: "Réveille-toi, Petite Graine",
+			lyrics: [
+				{
+					t: 0,
+					role: "child",
+					text: "J’attends dans le noir…"
+				},
+				{
+					t: 6,
+					role: "adult",
+					text: "La pluie arrive — voilà l’étincelle !"
+				},
+				{
+					t: 12,
+					role: "chorus",
+					text: "Réveille-toi, Petite Graine !"
+				},
+				{
+					t: 18,
+					role: "grandparent",
+					text: "Lentement, c’est encore grandir."
+				},
+				{
+					t: 24,
+					role: "chorus",
+					text: "En bas pour boire, en haut pour voir !"
+				},
+				{
+					t: 30,
+					role: "child",
+					text: "Je sens le soleil sur moi !"
+				}
+			],
+			spoken: [
+				{
+					role: "child",
+					text: "Chut. J’attends dans le noir. C’est l’heure ?"
+				},
+				{
+					role: "adult",
+					text: "Oui ! La pluie arrive — voilà l’étincelle !"
+				},
+				{
+					role: "chorus",
+					text: "Réveille-toi, Petite Graine ! Étire ta racine, trouve la lumière !"
+				},
+				{
+					role: "grandparent",
+					text: "Souviens-toi : lentement, c’est encore grandir."
+				},
+				{
+					role: "chorus",
+					text: "En bas pour boire — et en haut pour voir ! Réveille-toi, Petite Graine !"
+				},
+				{
+					role: "child",
+					text: "Oh ! Je sens le soleil sur moi !"
+				}
+			]
+		},
+		jam: {
+			title: "Wake Up, Little Seed",
+			lyrics: [
+				{
+					t: 0,
+					role: "child",
+					text: "Mi a wait inna di dark…"
+				},
+				{
+					t: 6,
+					role: "adult",
+					text: "Rain a come — dat a di spark!"
+				},
+				{
+					t: 12,
+					role: "chorus",
+					text: "Wake up, Little Seed!"
+				},
+				{
+					t: 18,
+					role: "grandparent",
+					text: "Slow still a grow."
+				},
+				{
+					t: 24,
+					role: "chorus",
+					text: "Down fi drink an up fi see!"
+				},
+				{
+					t: 30,
+					role: "child",
+					text: "Mi feel di sun pon mi!"
+				}
+			],
+			spoken: [
+				{
+					role: "child",
+					text: "Ssshh. Mi a wait inna di dark. A time now?"
+				},
+				{
+					role: "adult",
+					text: "Yes! Rain a come — dat a di spark!"
+				},
+				{
+					role: "chorus",
+					text: "Wake up, Little Seed! Stretch yu root, find di light yu need!"
+				},
+				{
+					role: "grandparent",
+					text: "Member: slow still a grow."
+				},
+				{
+					role: "chorus",
+					text: "Down fi drink — an up fi see! Wake up, Little Seed!"
+				},
+				{
+					role: "child",
+					text: "Oh! Mi feel di sun pon mi!"
+				}
+			]
+		}
+	},
+	"count-the-mangoes": {
+		en: {
+			title: "Count the Mangoes",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "One mango golden, two mango bright!"
+				},
+				{
+					t: 6,
+					role: "chorus",
+					text: "Three, four, five in the morning light!"
+				},
+				{
+					t: 12,
+					role: "child",
+					text: "How many now?"
+				},
+				{
+					t: 16,
+					role: "adult",
+					text: "Six, seven, eight — keep the beat!"
+				},
+				{
+					t: 22,
+					role: "chorus",
+					text: "Nine in the basket, ten at our feet!"
+				},
+				{
+					t: 28,
+					role: "grandparent",
+					text: "Rushing loses fruit."
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "Ready to count? One mango golden! Two mango bright! Three, four, five in the morning light!"
+				},
+				{
+					role: "child",
+					text: "How many now? How many now?"
+				},
+				{
+					role: "adult",
+					text: "Six! Seven! Eight — keep the beat!"
+				},
+				{
+					role: "chorus",
+					text: "Nine in the basket, ten at our feet! Count them clean and count them true!"
+				},
+				{
+					role: "grandparent",
+					text: "Easy. Rushing loses fruit."
+				},
+				{
+					role: "chorus",
+					text: "One to ten with me and you!"
+				}
+			]
+		},
+		es: {
+			title: "Cuenta los mangos",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "¡Un mango de oro, dos mangos de luz!"
+				},
+				{
+					t: 6,
+					role: "chorus",
+					text: "¡Tres, cuatro, cinco al amanecer!"
+				},
+				{
+					t: 12,
+					role: "child",
+					text: "¿Cuántos hay ahora?"
+				},
+				{
+					t: 16,
+					role: "adult",
+					text: "¡Seis, siete, ocho — sigue el ritmo!"
+				},
+				{
+					t: 22,
+					role: "chorus",
+					text: "¡Nueve en la cesta, diez a los pies!"
+				},
+				{
+					t: 28,
+					role: "grandparent",
+					text: "Si corres, se cae la fruta."
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "¿Listos para contar? ¡Un mango de oro! ¡Dos mangos de luz! Tres, cuatro, cinco al amanecer!"
+				},
+				{
+					role: "child",
+					text: "¿Cuántos hay ahora?"
+				},
+				{
+					role: "adult",
+					text: "¡Seis! ¡Siete! ¡Ocho — sigue el ritmo!"
+				},
+				{
+					role: "chorus",
+					text: "Nueve en la cesta, diez a los pies! Cuéntalos bien, cuéntalos tú!"
+				},
+				{
+					role: "grandparent",
+					text: "Despacio. Si corres, se cae la fruta."
+				},
+				{
+					role: "chorus",
+					text: "¡Del uno al diez contigo y conmigo!"
+				}
+			]
+		},
+		fr: {
+			title: "Compte les mangues",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "Une mangue d’or, deux mangues de jour !"
+				},
+				{
+					t: 6,
+					role: "chorus",
+					text: "Trois, quatre, cinq au matin !"
+				},
+				{
+					t: 12,
+					role: "child",
+					text: "Combien maintenant ?"
+				},
+				{
+					t: 16,
+					role: "adult",
+					text: "Six, sept, huit — garde le rythme !"
+				},
+				{
+					t: 22,
+					role: "chorus",
+					text: "Neuf dans le panier, dix à nos pieds !"
+				},
+				{
+					t: 28,
+					role: "grandparent",
+					text: "Trop vite, on perd le fruit."
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "Prêts à compter ? Une mangue d’or ! Deux mangues de jour ! Trois, quatre, cinq au matin !"
+				},
+				{
+					role: "child",
+					text: "Combien maintenant ?"
+				},
+				{
+					role: "adult",
+					text: "Six ! Sept ! Huit — garde le rythme !"
+				},
+				{
+					role: "chorus",
+					text: "Neuf dans le panier, dix à nos pieds ! Compte-les bien, compte-les vrai !"
+				},
+				{
+					role: "grandparent",
+					text: "Doucement. Trop vite, on perd le fruit."
+				},
+				{
+					role: "chorus",
+					text: "De un à dix, avec moi et toi !"
+				}
+			]
+		},
+		jam: {
+			title: "Count di Mango",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "One mango gold, two mango bright!"
+				},
+				{
+					t: 6,
+					role: "chorus",
+					text: "Tree, four, five inna morning light!"
+				},
+				{
+					t: 12,
+					role: "child",
+					text: "How much now?"
+				},
+				{
+					t: 16,
+					role: "adult",
+					text: "Six, seven, eight — keep di beat!"
+				},
+				{
+					t: 22,
+					role: "chorus",
+					text: "Nine inna basket, ten a wi foot!"
+				},
+				{
+					t: 28,
+					role: "grandparent",
+					text: "If yu rush, fruit drop."
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "Ready fi count? One mango gold! Two mango bright! Tree, four, five inna morning light!"
+				},
+				{
+					role: "child",
+					text: "How much now?"
+				},
+				{
+					role: "adult",
+					text: "Six! Seven! Eight — keep di beat!"
+				},
+				{
+					role: "chorus",
+					text: "Nine inna basket, ten a wi foot! Count dem clean, count dem true!"
+				},
+				{
+					role: "grandparent",
+					text: "Tek time. If yu rush, fruit drop."
+				},
+				{
+					role: "chorus",
+					text: "One to ten wid me an you!"
+				}
+			]
+		}
+	},
+	"roots-hold-hands": {
+		en: {
+			title: "Roots Hold Hands",
+			lyrics: [
+				{
+					t: 0,
+					role: "grandparent",
+					text: "Under the garden, the quiet work…"
+				},
+				{
+					t: 6,
+					role: "child",
+					text: "Who is down there in the dark?"
+				},
+				{
+					t: 12,
+					role: "adult",
+					text: "Roots hold hands. Water slips between!"
+				},
+				{
+					t: 18,
+					role: "chorus",
+					text: "Roots hold hands where the dark is kind"
+				},
+				{
+					t: 24,
+					role: "grandparent",
+					text: "Kindness can be quiet."
+				},
+				{
+					t: 30,
+					role: "chorus",
+					text: "Each one teach one, root to root!"
+				}
+			],
+			spoken: [
+				{
+					role: "grandparent",
+					text: "Lean in. Under the garden, the quiet work is happening."
+				},
+				{
+					role: "child",
+					text: "Who is down there in the dark?"
+				},
+				{
+					role: "adult",
+					text: "Friends! Roots hold hands. Water slips between!"
+				},
+				{
+					role: "chorus",
+					text: "Roots hold hands where the dark is kind. Help is hidden — help is mine!"
+				},
+				{
+					role: "grandparent",
+					text: "Kindness can be quiet, and still be strong."
+				},
+				{
+					role: "chorus",
+					text: "Each one teach one, root to root! The unseen garden does the truth!"
+				}
+			]
+		},
+		es: {
+			title: "Las raíces se dan la mano",
+			lyrics: [
+				{
+					t: 0,
+					role: "grandparent",
+					text: "Bajo el jardín, el trabajo callado…"
+				},
+				{
+					t: 6,
+					role: "child",
+					text: "¿Quién está ahí en la oscuridad?"
+				},
+				{
+					t: 12,
+					role: "adult",
+					text: "¡Las raíces se dan la mano!"
+				},
+				{
+					t: 18,
+					role: "chorus",
+					text: "Las raíces se dan la mano en la tierra amable"
+				},
+				{
+					t: 24,
+					role: "grandparent",
+					text: "La bondad puede ser quieta."
+				},
+				{
+					t: 30,
+					role: "chorus",
+					text: "¡Cada uno enseña a uno, raíz a raíz!"
+				}
+			],
+			spoken: [
+				{
+					role: "grandparent",
+					text: "Acércate. Bajo el jardín, el trabajo callado sigue."
+				},
+				{
+					role: "child",
+					text: "¿Quién está ahí en la oscuridad?"
+				},
+				{
+					role: "adult",
+					text: "¡Amigos! Las raíces se dan la mano. El agua se cuela entre ellas!"
+				},
+				{
+					role: "chorus",
+					text: "Las raíces se dan la mano donde la oscuridad es amable. La ayuda está escondida — y también es mía!"
+				},
+				{
+					role: "grandparent",
+					text: "La bondad puede ser quieta, y aún así fuerte."
+				},
+				{
+					role: "chorus",
+					text: "Cada uno enseña a uno, raíz a raíz!"
+				}
+			]
+		},
+		fr: {
+			title: "Les racines se tiennent la main",
+			lyrics: [
+				{
+					t: 0,
+					role: "grandparent",
+					text: "Sous le jardin, le travail tranquille…"
+				},
+				{
+					t: 6,
+					role: "child",
+					text: "Qui est là-bas dans le noir ?"
+				},
+				{
+					t: 12,
+					role: "adult",
+					text: "Les racines se tiennent la main !"
+				},
+				{
+					t: 18,
+					role: "chorus",
+					text: "Les racines se tiennent la main dans la terre douce"
+				},
+				{
+					t: 24,
+					role: "grandparent",
+					text: "La gentillesse peut être silencieuse."
+				},
+				{
+					t: 30,
+					role: "chorus",
+					text: "Chacun enseigne à chacun, racine à racine !"
+				}
+			],
+			spoken: [
+				{
+					role: "grandparent",
+					text: "Approche. Sous le jardin, le travail tranquille continue."
+				},
+				{
+					role: "child",
+					text: "Qui est là-bas dans le noir ?"
+				},
+				{
+					role: "adult",
+					text: "Des amis ! Les racines se tiennent la main. L’eau glisse entre elles !"
+				},
+				{
+					role: "chorus",
+					text: "Les racines se tiennent la main où le noir est doux. L’aide est cachée — et elle est à moi !"
+				},
+				{
+					role: "grandparent",
+					text: "La gentillesse peut être silencieuse, et pourtant forte."
+				},
+				{
+					role: "chorus",
+					text: "Chacun enseigne à chacun, racine à racine !"
+				}
+			]
+		},
+		jam: {
+			title: "Root Hold Hand",
+			lyrics: [
+				{
+					t: 0,
+					role: "grandparent",
+					text: "Under di garden, di quiet work…"
+				},
+				{
+					t: 6,
+					role: "child",
+					text: "A who down deh inna di dark?"
+				},
+				{
+					t: 12,
+					role: "adult",
+					text: "Root hold hand! Water slip in between!"
+				},
+				{
+					t: 18,
+					role: "chorus",
+					text: "Root hold hand weh di dark kind"
+				},
+				{
+					t: 24,
+					role: "grandparent",
+					text: "Kindness can stay quiet."
+				},
+				{
+					t: 30,
+					role: "chorus",
+					text: "Each one teach one, root to root!"
+				}
+			],
+			spoken: [
+				{
+					role: "grandparent",
+					text: "Lean in. Under di garden, di quiet work a gwaan."
+				},
+				{
+					role: "child",
+					text: "A who down deh inna di dark?"
+				},
+				{
+					role: "adult",
+					text: "Friends! Root hold hand. Water slip in between!"
+				},
+				{
+					role: "chorus",
+					text: "Root hold hand weh di dark kind. Help hide weh — help a mine!"
+				},
+				{
+					role: "grandparent",
+					text: "Kindness can stay quiet, an still strong."
+				},
+				{
+					role: "chorus",
+					text: "Each one teach one, root to root!"
+				}
+			]
+		}
+	},
+	"rain-sun-grow": {
+		en: {
+			title: "Rain, Sun, Grow",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "Rain, sun, grow!"
+				},
+				{
+					t: 6,
+					role: "child",
+					text: "Can I hurry?"
+				},
+				{
+					t: 12,
+					role: "adult",
+					text: "Light is patient. Water comes and goes."
+				},
+				{
+					t: 18,
+					role: "chorus",
+					text: "Wait — then you know!"
+				},
+				{
+					t: 24,
+					role: "grandparent",
+					text: "Too much of one gift can still be unkind."
+				},
+				{
+					t: 30,
+					role: "chorus",
+					text: "Rain, sun, grow — share the day!"
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "Ready? Rain! Sun! Grow!"
+				},
+				{
+					role: "child",
+					text: "Can I hurry? Can I hurry now?"
+				},
+				{
+					role: "adult",
+					text: "Not yet. Light is patient. Water comes and goes — a visitor, not a flood!"
+				},
+				{
+					role: "chorus",
+					text: "Wait — then you know!"
+				},
+				{
+					role: "grandparent",
+					text: "Too much of one gift can still be unkind."
+				},
+				{
+					role: "chorus",
+					text: "Rain, sun, grow! Share the day and let it show! Rain, sun, grow!"
+				}
+			]
+		},
+		es: {
+			title: "Lluvia, sol, crece",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "¡Lluvia, sol, crece!"
+				},
+				{
+					t: 6,
+					role: "child",
+					text: "¿Puedo apurarme?"
+				},
+				{
+					t: 12,
+					role: "adult",
+					text: "La luz es paciente. El agua va y viene."
+				},
+				{
+					t: 18,
+					role: "chorus",
+					text: "¡Espera — entonces lo sabes!"
+				},
+				{
+					t: 24,
+					role: "grandparent",
+					text: "Demasiado de un don también puede herir."
+				},
+				{
+					t: 30,
+					role: "chorus",
+					text: "¡Lluvia, sol, crece — comparte el día!"
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "¿Listos? ¡Lluvia! ¡Sol! ¡Crece!"
+				},
+				{
+					role: "child",
+					text: "¿Puedo apurarme? ¿Ya?"
+				},
+				{
+					role: "adult",
+					text: "Aún no. La luz es paciente. El agua va y viene — una visita, no una inundación!"
+				},
+				{
+					role: "chorus",
+					text: "Espera — entonces lo sabes!"
+				},
+				{
+					role: "grandparent",
+					text: "Demasiado de un don también puede herir."
+				},
+				{
+					role: "chorus",
+					text: "¡Lluvia, sol, crece! ¡Comparte el día!"
+				}
+			]
+		},
+		fr: {
+			title: "Pluie, soleil, grandis",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "Pluie, soleil, grandis !"
+				},
+				{
+					t: 6,
+					role: "child",
+					text: "Je peux me dépêcher ?"
+				},
+				{
+					t: 12,
+					role: "adult",
+					text: "La lumière est patiente. L’eau va et vient."
+				},
+				{
+					t: 18,
+					role: "chorus",
+					text: "Attends — alors tu sauras !"
+				},
+				{
+					t: 24,
+					role: "grandparent",
+					text: "Trop d’un cadeau peut encore blesser."
+				},
+				{
+					t: 30,
+					role: "chorus",
+					text: "Pluie, soleil, grandis — partage le jour !"
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "Prêts ? Pluie ! Soleil ! Grandis !"
+				},
+				{
+					role: "child",
+					text: "Je peux me dépêcher ? Maintenant ?"
+				},
+				{
+					role: "adult",
+					text: "Pas encore. La lumière est patiente. L’eau va et vient — une visite, pas une inondation !"
+				},
+				{
+					role: "chorus",
+					text: "Attends — alors tu sauras !"
+				},
+				{
+					role: "grandparent",
+					text: "Trop d’un cadeau peut encore blesser."
+				},
+				{
+					role: "chorus",
+					text: "Pluie, soleil, grandis ! Partage le jour !"
+				}
+			]
+		},
+		jam: {
+			title: "Rain, Sun, Grow",
+			lyrics: [
+				{
+					t: 0,
+					role: "chorus",
+					text: "Rain, sun, grow!"
+				},
+				{
+					t: 6,
+					role: "child",
+					text: "Mi can hurry?"
+				},
+				{
+					t: 12,
+					role: "adult",
+					text: "Light tek time. Water come an go."
+				},
+				{
+					t: 18,
+					role: "chorus",
+					text: "Wait — den yu know!"
+				},
+				{
+					t: 24,
+					role: "grandparent",
+					text: "Too much a one gift still can rough."
+				},
+				{
+					t: 30,
+					role: "chorus",
+					text: "Rain, sun, grow — share di day!"
+				}
+			],
+			spoken: [
+				{
+					role: "chorus",
+					text: "Ready? Rain! Sun! Grow!"
+				},
+				{
+					role: "child",
+					text: "Mi can hurry? Now?"
+				},
+				{
+					role: "adult",
+					text: "Not yet. Light tek time. Water come an go — a visit, not a flood!"
+				},
+				{
+					role: "chorus",
+					text: "Wait — den yu know!"
+				},
+				{
+					role: "grandparent",
+					text: "Too much a one gift still can rough."
+				},
+				{
+					role: "chorus",
+					text: "Rain, sun, grow! Share di day an let it show!"
+				}
+			]
+		}
+	}
+};
+function songPack(slug, locale) {
+	return songI18n[slug]?.[locale] ?? songI18n[slug]?.en ?? null;
+}
+function songAudioUrl(slug, locale) {
+	return `/audio/${locale}/${slug}.mp3`;
+}
+function KaraokePlayer({ song }) {
+	const { locale, t } = useLanguage();
+	const pack = songPack(song.slug, locale);
+	const src = songAudioUrl(song.slug, locale);
+	const lyrics = pack?.lyrics ?? song.lyrics;
+	const title = pack?.title ?? song.title;
+	const durationSec = lyrics[lyrics.length - 1]?.t + 8 || song.durationSec;
+	const audioRef = (0, import_react.useRef)(null);
+	const [playing, setPlaying] = (0, import_react.useState)(false);
+	const [tnow, setTnow] = (0, import_react.useState)(0);
+	const [error, setError] = (0, import_react.useState)("");
+	const current = (0, import_react.useMemo)(() => {
+		let line = lyrics[0];
+		for (const l of lyrics) if (l.t <= tnow) line = l;
+		return line;
+	}, [lyrics, tnow]);
+	(0, import_react.useEffect)(() => {
+		const el = audioRef.current;
+		if (!el) return;
+		el.pause();
+		el.currentTime = 0;
+		setPlaying(false);
+		setTnow(0);
+		setError("");
+	}, [src]);
+	(0, import_react.useEffect)(() => {
+		const el = audioRef.current;
+		if (!el) return;
+		const onTime = () => {
+			const dur = el.duration;
+			if (Number.isFinite(dur) && dur > 0) setTnow(el.currentTime / dur * durationSec);
+			else setTnow(el.currentTime);
+		};
+		const onPlay = () => setPlaying(true);
+		const onPause = () => setPlaying(false);
+		const onEnd = () => {
+			setPlaying(false);
+			setTnow(0);
+		};
+		const onErr = () => setError("Sound file did not load. Tap the grey bar below.");
+		el.addEventListener("timeupdate", onTime);
+		el.addEventListener("play", onPlay);
+		el.addEventListener("pause", onPause);
+		el.addEventListener("ended", onEnd);
+		el.addEventListener("error", onErr);
+		return () => {
+			el.removeEventListener("timeupdate", onTime);
+			el.removeEventListener("play", onPlay);
+			el.removeEventListener("pause", onPause);
+			el.removeEventListener("ended", onEnd);
+			el.removeEventListener("error", onErr);
+		};
+	}, [src, durationSec]);
+	async function toggle() {
+		const el = audioRef.current;
+		if (!el) {
+			setError("Player is not ready. Refresh the right side.");
+			return;
+		}
+		setError("");
+		try {
+			if (el.paused) {
+				el.volume = 1;
+				await el.play();
+			} else el.pause();
+		} catch {
+			setError("Tap the triangle on the grey sound bar below.");
+		}
+	}
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		className: "rounded-[28px] border border-border bg-bg-elevated p-5 shadow-soft",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(LanguagePicker, {}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "mt-4 flex flex-wrap items-center justify-between gap-3",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+					className: "text-xs font-semibold uppercase tracking-wider text-muted",
+					children: t("karaoke")
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+					className: "font-display text-2xl",
+					children: title
+				})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)(Button, {
+					type: "button",
+					size: "lg",
+					onClick: () => void toggle(),
+					"aria-pressed": playing,
+					children: [playing ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Pause, { className: "size-4" }) : /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Play, { className: "size-4" }), playing ? t("pause") : t("play")]
+				})]
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "mt-3 rounded-2xl bg-bg-subtle px-4 py-6 text-center font-display text-xl",
+				"aria-live": "polite",
+				children: current?.text
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "mt-2 text-center text-xs uppercase tracking-wide text-subtle",
+				children: current?.role
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("audio", {
+				ref: audioRef,
+				src,
+				controls: true,
+				preload: "auto",
+				className: "mt-5 w-full",
+				"aria-label": title
+			}, src),
+			error ? /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "mt-2 text-sm font-semibold text-primary",
+				children: error
+			}) : null,
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("ol", {
+				className: "mt-4 space-y-1 text-sm",
+				children: lyrics.map((line) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+					className: cn("rounded-xl px-3 py-2", current === line ? "bg-bg-subtle font-semibold" : "text-muted"),
+					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("span", {
+						className: "mr-2 text-xs uppercase text-subtle",
+						children: line.role
+					}), line.text]
+				}, `${line.t}-${line.text}`))
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+				className: "mt-4 flex items-center gap-2 text-xs text-subtle",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Volume2, {
+					className: "size-4",
+					"aria-hidden": true
+				}), t("speakerHint")]
+			})
+		]
+	});
+}
+function SongPage() {
+	const { slug } = Route$2.useParams();
+	const song = getSong(slug);
+	if (!song) throw notFound();
+	const { locale, t } = useLanguage();
+	const pack = songPack(song.slug, locale);
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("main", {
+		className: "mx-auto max-w-3xl px-4 py-10",
+		children: [
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Link, {
+				to: "/sing",
+				className: "text-sm font-semibold text-primary",
+				children: t("allSongs")
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h1", {
+				className: "mt-3 font-display text-4xl",
+				children: pack?.title ?? song.title
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "mt-2 text-muted",
+				children: song.learningObjective
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
+				className: "mt-6",
+				children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(KaraokePlayer, { song })
+			}),
+			/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("dl", {
+				className: "mt-8 space-y-4",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Row, {
+						k: "Chorus",
+						v: song.chorus
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Row, {
+						k: "Child question",
+						v: song.childQuestion
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Row, {
+						k: "Adult response",
+						v: song.adultResponse
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Row, {
+						k: "Grandparent wisdom",
+						v: song.grandparentWisdom
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Row, {
+						k: "Physical action",
+						v: song.physicalAction
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Row, {
+						k: "Offline activity",
+						v: song.offlineActivity
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Row, {
+						k: "Dance",
+						v: song.danceSteps.join(" · ")
+					})
+				]
+			})
+		]
+	});
+}
+function Row({ k, v }) {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("dt", {
+		className: "text-xs font-semibold uppercase tracking-wide text-subtle",
+		children: k
+	}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dd", {
+		className: "mt-1",
+		children: v
+	})] });
+}
+//#endregion
+export { SongPage as component };

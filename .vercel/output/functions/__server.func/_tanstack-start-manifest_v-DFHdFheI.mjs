@@ -1,0 +1,164 @@
+//#region node_modules/.nitro/vite/services/ssr/assets/_tanstack-start-manifest_v-DFHdFheI.js
+var tsrStartManifest = () => ({ routes: {
+	__root__: {
+		filePath: "/workspace/src/routes/__root.tsx",
+		children: [
+			"/",
+			"/family",
+			"/farm",
+			"/languages",
+			"/map",
+			"/parents",
+			"/press",
+			"/schools",
+			"/search",
+			"/start",
+			"/studio",
+			"/crew/$slug",
+			"/plants/$slug",
+			"/sing/$slug",
+			"/watch/$slug",
+			"/crew/",
+			"/plants/",
+			"/sing/",
+			"/watch/"
+		],
+		preloads: [
+			"/assets/index-BDTips3R.js",
+			"/assets/jsx-runtime-Cltr0gcK.js",
+			"/assets/link-CY_3yKXA.js"
+		],
+		scripts: [{ attrs: {
+			type: "module",
+			async: !0,
+			src: "/assets/index-BDTips3R.js"
+		} }]
+	},
+	"/": {
+		filePath: "/workspace/src/routes/index.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/routes-D1rlKbmS.js",
+			"/assets/sprout-DHykS5_d.js",
+			"/assets/characters-BORUL7EP.js",
+			"/assets/plants-DnntTFvI.js",
+			"/assets/songs-DTCk9H0R.js"
+		]
+	},
+	"/family": {
+		filePath: "/workspace/src/routes/family.tsx",
+		children: void 0,
+		preloads: ["/assets/family-Ci05kSZV.js", "/assets/activities-Dd-CTLae.js"]
+	},
+	"/farm": {
+		filePath: "/workspace/src/routes/farm.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/farm-CMrglcDD.js",
+			"/assets/sprout-DHykS5_d.js",
+			"/assets/plants-DnntTFvI.js"
+		]
+	},
+	"/languages": {
+		filePath: "/workspace/src/routes/languages.tsx",
+		children: void 0,
+		preloads: ["/assets/languages-Bzp9Zu-_.js", "/assets/plants-DnntTFvI.js"]
+	},
+	"/map": {
+		filePath: "/workspace/src/routes/map.tsx",
+		children: void 0,
+		preloads: ["/assets/map-DR4-UL-w.js", "/assets/plants-DnntTFvI.js"]
+	},
+	"/parents": {
+		filePath: "/workspace/src/routes/parents.tsx",
+		children: void 0,
+		preloads: ["/assets/parents-4wvKyXQF.js"]
+	},
+	"/press": {
+		filePath: "/workspace/src/routes/press.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/press-3TzqKOM_.js",
+			"/assets/CopyBlock-CQVhaAbe.js",
+			"/assets/marketing-CNlewrt0.js"
+		]
+	},
+	"/schools": {
+		filePath: "/workspace/src/routes/schools.tsx",
+		children: void 0,
+		preloads: ["/assets/schools-CzJNMAsD.js", "/assets/marketing-CNlewrt0.js"]
+	},
+	"/search": {
+		filePath: "/workspace/src/routes/search.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/search-DUF4kn5O.js",
+			"/assets/characters-BORUL7EP.js",
+			"/assets/activities-Dd-CTLae.js",
+			"/assets/plants-DnntTFvI.js",
+			"/assets/songs-DTCk9H0R.js",
+			"/assets/episodes-B6LD85GJ.js"
+		]
+	},
+	"/start": {
+		filePath: "/workspace/src/routes/start.tsx",
+		children: void 0,
+		preloads: ["/assets/start-C4_asaeH.js"]
+	},
+	"/studio": {
+		filePath: "/workspace/src/routes/studio.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/studio-DSoEzaps.js",
+			"/assets/songs-DTCk9H0R.js",
+			"/assets/CopyBlock-CQVhaAbe.js",
+			"/assets/marketing-CNlewrt0.js"
+		]
+	},
+	"/crew/$slug": {
+		filePath: "/workspace/src/routes/crew/$slug.tsx",
+		children: void 0,
+		preloads: ["/assets/_slug-C5xjf0QC.js", "/assets/characters-BORUL7EP.js"]
+	},
+	"/plants/$slug": {
+		filePath: "/workspace/src/routes/plants/$slug.tsx",
+		children: void 0,
+		preloads: ["/assets/_slug-D5C06hTQ.js", "/assets/plants-DnntTFvI.js"]
+	},
+	"/sing/$slug": {
+		filePath: "/workspace/src/routes/sing/$slug.tsx",
+		children: void 0,
+		preloads: ["/assets/_slug-IpGohlOi.js", "/assets/songs-DTCk9H0R.js"]
+	},
+	"/watch/$slug": {
+		filePath: "/workspace/src/routes/watch/$slug.tsx",
+		children: void 0,
+		preloads: [
+			"/assets/_slug-DhGwG0OT.js",
+			"/assets/characters-BORUL7EP.js",
+			"/assets/episodes-B6LD85GJ.js"
+		]
+	},
+	"/crew/": {
+		filePath: "/workspace/src/routes/crew/index.tsx",
+		children: void 0,
+		preloads: ["/assets/crew-wbomnzos.js", "/assets/characters-BORUL7EP.js"]
+	},
+	"/plants/": {
+		filePath: "/workspace/src/routes/plants/index.tsx",
+		children: void 0,
+		preloads: ["/assets/plants-CTyeerrg.js", "/assets/plants-DnntTFvI.js"]
+	},
+	"/sing/": {
+		filePath: "/workspace/src/routes/sing/index.tsx",
+		children: void 0,
+		preloads: ["/assets/sing-Dm7eC0gw.js", "/assets/songs-DTCk9H0R.js"]
+	},
+	"/watch/": {
+		filePath: "/workspace/src/routes/watch/index.tsx",
+		children: void 0,
+		preloads: ["/assets/watch-5QO-LKE4.js", "/assets/episodes-B6LD85GJ.js"]
+	}
+} });
+//#endregion
+export { tsrStartManifest };
