@@ -123,6 +123,8 @@ export interface SongRecord {
   durationSec: number;
   relatedEpisode?: string;
   audioUrl?: string;
+  poster?: string;
+  videoUrl?: string;
 }
 
 export interface EpisodeRecord {

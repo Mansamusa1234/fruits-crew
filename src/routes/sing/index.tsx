@@ -16,10 +16,15 @@ function SingIndex() {
             <Link
               to="/sing/$slug"
               params={{ slug: s.slug }}
-              className="block rounded-[24px] border border-border bg-bg-elevated p-5 shadow-soft"
+              className="block overflow-hidden rounded-[24px] border-4 border-hibiscus bg-white shadow-[0_8px_0_#e11d74]"
             >
-              <h2 className="font-display text-2xl">{s.title}</h2>
-              <p className="mt-1 text-sm text-muted">{s.learningObjective}</p>
+              {s.poster ? (
+                <img src={s.poster} alt="" className="aspect-video w-full object-cover" />
+              ) : null}
+              <div className="p-5">
+                <h2 className="font-display text-2xl">{s.title}</h2>
+                <p className="mt-1 text-sm text-muted">{s.learningObjective}</p>
+              </div>
             </Link>
           </li>
         ))}

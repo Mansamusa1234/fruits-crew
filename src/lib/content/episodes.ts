@@ -51,6 +51,49 @@ export const episodes: EpisodeRecord[] = [
       sources: ["RHS germination advice (general)"],
     },
   },
+  {
+    slug: "jump-in-and-scrub",
+    title: "Jump In and Scrub",
+    synopsis:
+      "Little Seed wants to be queen of the bubbles. Wally turns the tap. Mama Soursop keeps the water kind. They jump in, scrub, and wash their hands — an original Fruits Crew bath song, not copied from any other show.",
+    mystery: "How do we fill the bath without making a flood?",
+    predictionQuestion: "What do we do with our hands before we eat?",
+    natureExplanation:
+      "Warm water, a little soap, and rubbing takes dirt off skin. Rinse and dry. Never run a bath without an adult. Water is a gift, like rain in the garden — the right amount, not a flood.",
+    cooperationBeat:
+      "Wally wants to fill it to the top. Mama Soursop says stop at a safe line. Little Seed jumps in when an adult says yes. Ray dries the towels in the sun.",
+    songSlug: "jump-in-and-scrub",
+    offlineActivity:
+      "Sing Jump In and Scrub at real bath time. Adult in the room. Towels ready. Hands washed after play.",
+    parentGuide:
+      "Ages 2–4: tap, jump, scrub, wash-hands actions. Never leave a child with standing water. This is an original Fruits Crew rhyme about hygiene and play — not a copy of another cartoon. Keep volume kind.",
+    ageBands: ["2-4", "5-7", "family"],
+    characters: ["little-seed", "mama-soursop", "wally-water", "grandma-soil", "ray-sunshine"],
+    sources: [
+      {
+        title: "Handwashing for families",
+        publisher: "NHS / public health hygiene teaching",
+        url: "https://www.nhs.uk/",
+        accessed: "2026-09-14",
+        notes: "General handwashing teaching; not medical advice",
+      },
+    ],
+    marketing: {
+      youtubeTitle: "Jump In and Scrub | Original Fruits Crew bath song",
+      description:
+        "In the bath! I’ll be the queen! Fill it up, the tap, jump in the water and scrub, wash my hands. Original Fruits Crew. Not copied from any other show. Everything is connected.",
+      thumbnailConcept: "Mama Soursop in a bubble crown, Little Seed jumping into a colourful garden tub, Wally at the tap.",
+      learningObjective: "Bath-time sequence and handwashing with adult care.",
+      ageRange: "2–7 with family",
+      keywords: ["bath song", "wash your hands", "original kids song", "Fruits Crew", "bubbles"],
+      parentCta: "Sing it at bath time. Adult stays in the room.",
+      safetyNotes: "Adult supervision around water at all times. No copied cartoons. Safe volume.",
+      languages: ["English", "Spanish", "French", "Jamaican Patois"],
+      copyrightOwner: "Fruits Crew / Darren-neil",
+      musicOwner: "Fruits Crew original",
+      sources: ["NHS family handwashing guidance (general)"],
+    },
+  },
 ];
 
 export function getEpisode(slug: string) {

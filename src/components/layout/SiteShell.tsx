@@ -36,10 +36,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
         <div className="fruit-stripe" aria-hidden />
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
           <Link to="/" className="flex min-h-11 items-center gap-2 font-display text-lg font-semibold tracking-tight">
-            <Leaf className="size-5 text-hibiscus" aria-hidden />
-            <span className="bg-gradient-to-r from-hibiscus via-mango to-lagoon bg-clip-text text-transparent">
-              Fruits Crew
-            </span>
+            <Leaf className="size-5 text-leaf" aria-hidden />
+            Fruits Crew
           </Link>
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
             {NAV.map((item) => (

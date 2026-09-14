@@ -9,10 +9,9 @@ const buttonVariants = cva(
     variants: {
       variant: {
         primary:
-          "bg-hibiscus text-white shadow-[0_5px_0_#9d174d] hover:bg-[#ff4d94] hover:-translate-y-0.5",
-        secondary:
-          "bg-lagoon text-white shadow-[0_5px_0_#0369a1] hover:bg-[#22d3ee] hover:-translate-y-0.5",
-        ghost: "text-hibiscus hover:bg-banana",
+          "bg-leaf text-white shadow-[0_4px_0_#166534] hover:bg-[#22c55e] hover:-translate-y-0.5",
+        secondary: "border-2 border-leaf bg-white text-leaf hover:bg-banana",
+        ghost: "text-leaf hover:bg-banana",
       },
       size: {
         md: "min-h-11 px-5 py-2.5 text-sm",

@@ -89,6 +89,23 @@ export function KaraokePlayer({ song }: { song: SongRecord }) {
   return (
     <section className="rounded-[28px] border border-border bg-bg-elevated p-5 shadow-soft">
       <LanguagePicker />
+      {song.poster ? (
+        <img
+          src={song.poster}
+          alt=""
+          className="mt-4 aspect-video w-full rounded-[22px] object-cover"
+        />
+      ) : null}
+      {song.videoUrl ? (
+        <video
+          className="mt-4 aspect-video w-full rounded-[22px] bg-black object-cover"
+          src={song.videoUrl}
+          poster={song.poster}
+          controls
+          playsInline
+          preload="metadata"
+        />
+      ) : null}
       <div className="mt-4 flex flex-wrap items-center justify-between gap-3">
         <div>
           <p className="text-xs font-semibold uppercase tracking-wider text-muted">{t("karaoke")}</p>

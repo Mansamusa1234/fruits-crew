@@ -1,6 +1,7 @@
 import { createFileRoute, Link, notFound } from "@tanstack/react-router";
 import { characters } from "@/lib/content/characters";
 import { getEpisode } from "@/lib/content/episodes";
+import { getSong } from "@/lib/content/songs";
 
 export const Route = createFileRoute("/watch/$slug")({ component: EpisodePage });
 
@@ -8,16 +9,28 @@ function EpisodePage() {
   const { slug } = Route.useParams();
   const e = getEpisode(slug);
   if (!e) throw notFound();
+  const song = getSong(e.songSlug);
 
   return (
     <main className="mx-auto max-w-3xl px-4 py-10">
       <p className="text-sm font-semibold uppercase tracking-widest text-primary">Pilot episode</p>
       <h1 className="mt-2 font-display text-4xl">{e.title}</h1>
-      <img
-        src="/scenes/garden-hero.jpg"
-        alt="The Crew in the garden at sunrise"
-        className="mt-6 aspect-video w-full rounded-[28px] object-cover"
-      />
+      {song?.videoUrl ? (
+        <video
+          className="mt-6 aspect-video w-full rounded-[28px] bg-black object-cover"
+          src={song.videoUrl}
+          poster={song.poster}
+          controls
+          playsInline
+          preload="metadata"
+        />
+      ) : (
+        <img
+          src={song?.poster ?? "/scenes/garden-hero.jpg"}
+          alt=""
+          className="mt-6 aspect-video w-full rounded-[28px] object-cover"
+        />
+      )}
       <p className="mt-6 text-lg">{e.synopsis}</p>
       <Block title="1. The mystery">{e.mystery}</Block>
       <Block title="2. Predict">{e.predictionQuestion}</Block>

@@ -51,13 +51,7 @@
     color: var(--color-fg);
     font-family: var(--font-sans);
     line-height: 1.55;
-    background-color: #fff4c8;
-    background-image:
-      radial-gradient(900px 520px at 0% -8%, #ff4d8d66, transparent 58%),
-      radial-gradient(820px 480px at 100% 0%, #00d4d466, transparent 52%),
-      radial-gradient(720px 420px at 100% 100%, #ffe566aa, transparent 55%),
-      radial-gradient(640px 380px at 0% 100%, #65d12666, transparent 50%);
-    background-attachment: fixed;
+    background-color: #fff8e8;
   }
 
   h1,

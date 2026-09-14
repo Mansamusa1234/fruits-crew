@@ -1,0 +1,6 @@
+file '/workspace/public/audio/_bath/jam-0.mp3'
+file '/workspace/public/audio/_bath/jam-1.mp3'
+file '/workspace/public/audio/_bath/jam-2.mp3'
+file '/workspace/public/audio/_bath/jam-3.mp3'
+file '/workspace/public/audio/_bath/jam-4.mp3'
+file '/workspace/public/audio/_bath/jam-5.mp3'
