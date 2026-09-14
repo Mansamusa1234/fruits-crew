@@ -1,20 +1,26 @@
 @import "tailwindcss";
 
 @theme {
-  --color-bg: #f4efe4;
-  --color-bg-elevated: #fffaf2;
-  --color-bg-subtle: #eae3d4;
-  --color-fg: #2c2416;
-  --color-muted: #6b5e4a;
-  --color-subtle: #8a7b66;
-  --color-primary: #2f5d3a;
-  --color-primary-fg: #f7f3ea;
-  --color-leaf: #4f7d56;
-  --color-soil: #5c4634;
-  --color-border: color-mix(in oklab, #2c2416 14%, transparent);
-  --color-border-strong: color-mix(in oklab, #2c2416 24%, transparent);
-  --color-warn: #8a5a28;
-  --color-danger: #7a2e2e;
+  --color-bg: #fff6d8;
+  --color-bg-elevated: #ffffff;
+  --color-bg-subtle: #ffe9a8;
+  --color-fg: #1c140c;
+  --color-muted: #5a3d28;
+  --color-subtle: #8a5a32;
+  --color-primary: #e11d74;
+  --color-primary-fg: #ffffff;
+  --color-leaf: #16a34a;
+  --color-soil: #7c2d12;
+  --color-mango: #ff8a00;
+  --color-banana: #ffe566;
+  --color-lagoon: #00b4d8;
+  --color-hibiscus: #e11d74;
+  --color-lime: #65d126;
+  --color-dragon: #c026d3;
+  --color-border: color-mix(in oklab, #e11d74 18%, transparent);
+  --color-border-strong: color-mix(in oklab, #ff8a00 55%, #1c140c);
+  --color-warn: #c2410c;
+  --color-danger: #be123c;
 
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-sans: "Nunito Sans", "Segoe UI", system-ui, sans-serif;
@@ -25,7 +31,7 @@
   --radius-lg: 20px;
   --radius-xl: 28px;
 
-  --shadow-soft: 0 10px 30px color-mix(in oklab, #2c2416 8%, transparent);
+  --shadow-soft: 0 12px 32px color-mix(in oklab, #e11d74 18%, transparent);
 }
 
 @layer base {
@@ -42,10 +48,16 @@
 
   body {
     margin: 0;
-    background: var(--color-bg);
     color: var(--color-fg);
     font-family: var(--font-sans);
     line-height: 1.55;
+    background-color: #fff4c8;
+    background-image:
+      radial-gradient(900px 520px at 0% -8%, #ff4d8d66, transparent 58%),
+      radial-gradient(820px 480px at 100% 0%, #00d4d466, transparent 52%),
+      radial-gradient(720px 420px at 100% 100%, #ffe566aa, transparent 55%),
+      radial-gradient(640px 380px at 0% 100%, #65d12666, transparent 50%);
+    background-attachment: fixed;
   }
 
   h1,
@@ -67,13 +79,145 @@
   }
 
   :focus-visible {
-    outline: 3px solid var(--color-primary);
+    outline: 3px solid #ff8a00;
     outline-offset: 3px;
   }
 
   img {
     max-width: 100%;
     height: auto;
+  }
+}
+
+.fruit-stripe {
+  height: 7px;
+  background: linear-gradient(
+    90deg,
+    #e11d74,
+    #ff8a00,
+    #ffe566,
+    #65d126,
+    #00b4d8,
+    #c026d3,
+    #e11d74
+  );
+  background-size: 220% 100%;
+  animation: fruit-stripe 9s linear infinite;
+}
+
+@keyframes fruit-stripe {
+  to {
+    background-position: 220% 0;
+  }
+}
+
+.farm-sky-glow {
+  position: absolute;
+  inset: -20% 10% auto;
+  height: 40%;
+  background: radial-gradient(circle, rgb(255 244 200 / 0.55), transparent 70%);
+  pointer-events: none;
+}
+
+.farm-sun {
+  position: absolute;
+  top: 6%;
+  right: 10%;
+  width: 90px;
+  height: 90px;
+  border-radius: 999px;
+  background: radial-gradient(circle, #fff6c4, #e2c14a 55%, transparent 72%);
+  box-shadow: 0 0 60px 20px rgb(226 193 74 / 0.45);
+  animation: farm-pulse 2.4s ease-in-out infinite;
+}
+
+.farm-plot {
+  background: linear-gradient(#8fbf88 0%, #6b8f55 38%, #6b4b32 38%, #4a3324 100%);
+  box-shadow: inset 0 0 0 4px rgb(92 70 52 / 0.35), 0 12px 24px rgb(44 36 22 / 0.18);
+}
+
+.farm-grow {
+  transform-origin: 50% 100%;
+  animation: farm-sway 3.6s ease-in-out infinite;
+}
+
+.farm-bee {
+  position: absolute;
+  top: 18%;
+  width: 10px;
+  height: 7px;
+  border-radius: 999px;
+  background: #f0c84a;
+  box-shadow: 2px 0 0 #2c2416;
+  animation: farm-bee 3s linear infinite;
+}
+
+.farm-rain span {
+  position: absolute;
+  top: -10%;
+  width: 2px;
+  height: 14%;
+  background: rgb(255 255 255 / 0.55);
+  animation: farm-rain 0.9s linear infinite;
+}
+
+@keyframes farm-sway {
+  50% {
+    transform: rotate(-2.4deg);
+  }
+}
+
+@keyframes farm-pulse {
+  50% {
+    transform: scale(1.08);
+    opacity: 0.92;
+  }
+}
+
+@keyframes farm-bee {
+  from {
+    left: 8%;
+  }
+  to {
+    left: 82%;
+  }
+}
+
+.farm-wash {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: overlay;
+  opacity: 0.72;
+  transition: background 900ms ease, opacity 900ms ease;
+}
+
+.farm-multiply {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  transition: background 900ms ease;
+}
+
+.farm-chip {
+  border-radius: 999px;
+  border: 1px solid rgb(255 255 255 / 0.28);
+  background: rgb(0 0 0 / 0.28);
+  color: white;
+  padding: 0.4rem 0.85rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.farm-chip[aria-pressed="true"] {
+  background: white;
+  color: #2c2416;
+}
+
+@keyframes farm-rain {
+  to {
+    transform: translateY(140%);
   }
 }
 

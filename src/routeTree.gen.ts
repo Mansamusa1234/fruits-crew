@@ -11,11 +11,14 @@
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
 import { Route as FamilyRouteImport } from './routes/family'
+import { Route as FarmRouteImport } from './routes/farm'
+import { Route as LanguagesRouteImport } from './routes/languages'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as ParentsRouteImport } from './routes/parents'
 import { Route as PressRouteImport } from './routes/press'
 import { Route as SchoolsRouteImport } from './routes/schools'
 import { Route as SearchRouteImport } from './routes/search'
+import { Route as StartRouteImport } from './routes/start'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as CrewIndexRouteImport } from './routes/crew/index'
 import { Route as CrewSlugRouteImport } from './routes/crew/$slug'
@@ -34,6 +37,16 @@ const IndexRoute = IndexRouteImport.update({
 const FamilyRoute = FamilyRouteImport.update({
   id: '/family',
   path: '/family',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FarmRoute = FarmRouteImport.update({
+  id: '/farm',
+  path: '/farm',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const LanguagesRoute = LanguagesRouteImport.update({
+  id: '/languages',
+  path: '/languages',
   getParentRoute: () => rootRouteImport,
 } as any)
 const MapRoute = MapRouteImport.update({
@@ -59,6 +72,11 @@ const SchoolsRoute = SchoolsRouteImport.update({
 const SearchRoute = SearchRouteImport.update({
   id: '/search',
   path: '/search',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const StartRoute = StartRouteImport.update({
+  id: '/start',
+  path: '/start',
   getParentRoute: () => rootRouteImport,
 } as any)
 const StudioRoute = StudioRouteImport.update({
@@ -110,11 +128,14 @@ const WatchSlugRoute = WatchSlugRouteImport.update({
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/family': typeof FamilyRoute
+  '/farm': typeof FarmRoute
+  '/languages': typeof LanguagesRoute
   '/map': typeof MapRoute
   '/parents': typeof ParentsRoute
   '/press': typeof PressRoute
   '/schools': typeof SchoolsRoute
   '/search': typeof SearchRoute
+  '/start': typeof StartRoute
   '/studio': typeof StudioRoute
   '/crew/$slug': typeof CrewSlugRoute
   '/plants/$slug': typeof PlantsSlugRoute
@@ -128,11 +149,14 @@ export interface FileRoutesByFullPath {
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/family': typeof FamilyRoute
+  '/farm': typeof FarmRoute
+  '/languages': typeof LanguagesRoute
   '/map': typeof MapRoute
   '/parents': typeof ParentsRoute
   '/press': typeof PressRoute
   '/schools': typeof SchoolsRoute
   '/search': typeof SearchRoute
+  '/start': typeof StartRoute
   '/studio': typeof StudioRoute
   '/crew/$slug': typeof CrewSlugRoute
   '/plants/$slug': typeof PlantsSlugRoute
@@ -147,11 +171,14 @@ export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
   '/family': typeof FamilyRoute
+  '/farm': typeof FarmRoute
+  '/languages': typeof LanguagesRoute
   '/map': typeof MapRoute
   '/parents': typeof ParentsRoute
   '/press': typeof PressRoute
   '/schools': typeof SchoolsRoute
   '/search': typeof SearchRoute
+  '/start': typeof StartRoute
   '/studio': typeof StudioRoute
   '/crew/$slug': typeof CrewSlugRoute
   '/plants/$slug': typeof PlantsSlugRoute
@@ -167,11 +194,14 @@ export interface FileRouteTypes {
   fullPaths:
     | '/'
     | '/family'
+    | '/farm'
+    | '/languages'
     | '/map'
     | '/parents'
     | '/press'
     | '/schools'
     | '/search'
+    | '/start'
     | '/studio'
     | '/crew/$slug'
     | '/plants/$slug'
@@ -185,11 +215,14 @@ export interface FileRouteTypes {
   to:
     | '/'
     | '/family'
+    | '/farm'
+    | '/languages'
     | '/map'
     | '/parents'
     | '/press'
     | '/schools'
     | '/search'
+    | '/start'
     | '/studio'
     | '/crew/$slug'
     | '/plants/$slug'
@@ -203,11 +236,14 @@ export interface FileRouteTypes {
     | '__root__'
     | '/'
     | '/family'
+    | '/farm'
+    | '/languages'
     | '/map'
     | '/parents'
     | '/press'
     | '/schools'
     | '/search'
+    | '/start'
     | '/studio'
     | '/crew/$slug'
     | '/plants/$slug'
@@ -222,11 +258,14 @@ export interface FileRouteTypes {
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
   FamilyRoute: typeof FamilyRoute
+  FarmRoute: typeof FarmRoute
+  LanguagesRoute: typeof LanguagesRoute
   MapRoute: typeof MapRoute
   ParentsRoute: typeof ParentsRoute
   PressRoute: typeof PressRoute
   SchoolsRoute: typeof SchoolsRoute
   SearchRoute: typeof SearchRoute
+  StartRoute: typeof StartRoute
   StudioRoute: typeof StudioRoute
   CrewSlugRoute: typeof CrewSlugRoute
   PlantsSlugRoute: typeof PlantsSlugRoute
@@ -252,6 +291,20 @@ declare module '@tanstack/react-router' {
       path: '/family'
       fullPath: '/family'
       preLoaderRoute: typeof FamilyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/farm': {
+      id: '/farm'
+      path: '/farm'
+      fullPath: '/farm'
+      preLoaderRoute: typeof FarmRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/languages': {
+      id: '/languages'
+      path: '/languages'
+      fullPath: '/languages'
+      preLoaderRoute: typeof LanguagesRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/map': {
@@ -287,6 +340,13 @@ declare module '@tanstack/react-router' {
       path: '/search'
       fullPath: '/search'
       preLoaderRoute: typeof SearchRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/start': {
+      id: '/start'
+      path: '/start'
+      fullPath: '/start'
+      preLoaderRoute: typeof StartRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/studio': {
@@ -358,11 +418,14 @@ declare module '@tanstack/react-router' {
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
   FamilyRoute: FamilyRoute,
+  FarmRoute: FarmRoute,
+  LanguagesRoute: LanguagesRoute,
   MapRoute: MapRoute,
   ParentsRoute: ParentsRoute,
   PressRoute: PressRoute,
   SchoolsRoute: SchoolsRoute,
   SearchRoute: SearchRoute,
+  StartRoute: StartRoute,
   StudioRoute: StudioRoute,
   CrewSlugRoute: CrewSlugRoute,
   PlantsSlugRoute: PlantsSlugRoute,

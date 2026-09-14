@@ -17,6 +17,16 @@ import { songs } from "@/lib/content/songs";
 
 export const Route = createFileRoute("/")({ component: Home });
 
+const CARD_RING = [
+  "border-[#e11d74] shadow-[0_10px_0_#e11d74]",
+  "border-[#ff8a00] shadow-[0_10px_0_#ff8a00]",
+  "border-[#00b4d8] shadow-[0_10px_0_#00b4d8]",
+  "border-[#65d126] shadow-[0_10px_0_#65d126]",
+  "border-[#c026d3] shadow-[0_10px_0_#c026d3]",
+  "border-[#ffe566] shadow-[0_10px_0_#eab308]",
+  "border-[#16a34a] shadow-[0_10px_0_#16a34a]",
+];
+
 function Home() {
   return (
     <main>
@@ -26,21 +36,27 @@ function Home() {
           alt="Friendly original fruit and nature characters in a sunlit worldwide garden"
           className="h-[min(78vh,720px)] w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-bg via-bg/55 to-transparent" />
-        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-6xl px-4 pb-10">
-          <p className="font-display text-sm font-semibold uppercase tracking-[0.28em] text-primary">
+        <div className="absolute inset-0 bg-gradient-to-t from-[#e11d74] via-[#ff8a00]/50 to-transparent" />
+        <div className="absolute inset-x-0 bottom-0 mx-auto max-w-6xl px-4 pb-10 text-white">
+          <p className="font-display text-sm font-semibold uppercase tracking-[0.28em] text-banana">
             Fruits Crew
           </p>
           <h1 className="mt-2 max-w-2xl font-display text-4xl font-semibold sm:text-6xl">
             The whole living world is one family.
           </h1>
           <p className="mt-3 max-w-xl text-lg">Come meet the world that talks!</p>
-          <p className="mt-2 max-w-xl text-muted">
+          <p className="mt-2 max-w-xl text-white/90">
             Everything is connected. Each one teach one. Learn together. Grow together. Love one
             another.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <Button asChild size="lg">
+              <Link to="/farm">Open your farm</Link>
+            </Button>
+            <Button asChild variant="secondary" size="lg">
+              <Link to="/start">Start here</Link>
+            </Button>
+            <Button asChild variant="secondary" size="lg">
               <Link to="/plants">Start Exploring</Link>
             </Button>
             <Button asChild variant="secondary" size="lg">
@@ -70,12 +86,12 @@ function Home() {
           </Link>
         </div>
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
-          {characters.map((c) => (
+          {characters.map((c, i) => (
             <Link
               key={c.slug}
               to="/crew/$slug"
               params={{ slug: c.slug }}
-              className="overflow-hidden rounded-[28px] border border-border bg-bg-elevated shadow-soft"
+              className={`overflow-hidden rounded-[28px] border-4 bg-white ${CARD_RING[i % CARD_RING.length]}`}
             >
               <img src={c.portrait} alt={c.accessibilityDescription} className="aspect-square w-full object-cover" />
               <div className="p-4">
@@ -99,12 +115,12 @@ function Home() {
           as one country owning the living world.
         </p>
         <div className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {plants.slice(0, 8).map((p) => (
+          {plants.slice(0, 8).map((p, i) => (
             <Link
               key={p.slug}
               to="/plants/$slug"
               params={{ slug: p.slug }}
-              className="rounded-[20px] border border-border bg-bg-elevated p-4 hover:bg-bg-subtle"
+              className={`rounded-[20px] border-4 bg-white p-4 ${CARD_RING[i % CARD_RING.length]}`}
             >
               <h3 className="font-display text-xl">{p.commonName}</h3>
               <p className="text-sm italic text-muted">{p.scientificName}</p>
@@ -126,12 +142,12 @@ function Home() {
           Easy chorus. Optional karaoke.
         </p>
         <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-          {songs.map((s) => (
+          {songs.map((s, i) => (
             <li key={s.slug}>
               <Link
                 to="/sing/$slug"
                 params={{ slug: s.slug }}
-                className="flex min-h-24 items-center justify-between rounded-[20px] border border-border bg-bg-elevated px-5 py-4"
+                className={`flex min-h-24 items-center justify-between rounded-[20px] border-4 bg-white px-5 py-4 ${CARD_RING[i % CARD_RING.length]}`}
               >
                 <span>
                   <span className="block font-display text-xl">{s.title}</span>
@@ -181,7 +197,7 @@ function Home() {
           Pronunciations wait for native-speaker review.
         </p>
         <Link
-          to="/plants"
+          to="/languages"
           className="mt-4 inline-flex min-h-11 items-center gap-2 font-semibold text-primary"
         >
           <Languages className="size-4" aria-hidden />
@@ -231,7 +247,7 @@ function Home() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16">
-        <div className="rounded-[28px] border border-border bg-bg-elevated p-6 shadow-soft sm:p-8">
+        <div className="rounded-[28px] border-4 border-lagoon bg-white p-6 shadow-[0_10px_0_#00b4d8] sm:p-8">
           <Shield className="size-6 text-primary" aria-hidden />
           <h2 className="mt-3 font-display text-3xl">For parents and educators</h2>
           <p className="mt-3 max-w-2xl text-muted">
@@ -264,8 +280,8 @@ function LearnCard({
   to: "/watch" | "/family" | "/sing";
 }) {
   return (
-    <Link to={to} className="rounded-[20px] border border-border bg-bg-elevated p-5 hover:bg-bg-subtle">
-      <Icon className="size-5 text-primary" aria-hidden />
+    <Link to={to} className="rounded-[20px] border-4 border-mango bg-white p-5 shadow-[0_8px_0_#ff8a00]">
+      <Icon className="size-5 text-hibiscus" aria-hidden />
       <h3 className="mt-3 font-display text-xl">{title}</h3>
       <p className="mt-1 text-sm text-muted">{text}</p>
     </Link>

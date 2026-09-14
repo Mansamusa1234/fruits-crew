@@ -15,6 +15,8 @@ export const characters: CharacterRecord[] = [
     visualPrompt:
       "Tiny round seed with large curious eyes, small integrated limbs, a sprout on top, warm cinematic sunlight, botanically recognisable, never frightening.",
     catchphrase: "Why? How? What happens next?",
+    story:
+      "Little Seed began in the dark. That was not a scary dark. It was Grandma Soil’s quiet house, where roots hold hands and rain visits slowly.\n\nLittle Seed did not know a name yet. Only a feeling: wait. Wait for a sip. Wait for a warm day. Wait for a crack of light.\n\nWally Water Drop arrived first — not a flood, just a kind sip. Ray of Sunshine did not rush. Ray peeked. Mama Soursop told the old garden story: every fruit you love was once this small.\n\nWhen the coat split, a root went down and a green question went up. That question is Little Seed’s job. Little Seed asks so children can ask too: Why? How? What happens next?\n\nLittle Seed is not one fruit. Little Seed is the beginning of many — mango, banana, soursop, bean, grain. The whole living world starts this small. Everything is connected. Each one teach one.",
     relationships: {
       "mama-soursop": "Looks to Mama for stories and comfort",
       "grandma-soil": "Learns patience from the ground below",
@@ -40,6 +42,8 @@ export const characters: CharacterRecord[] = [
     visualPrompt:
       "Motherly soursop fruit with spiky green skin, leafy crown, expressive eyes, small integrated limbs, natural fruit texture.",
     catchphrase: "Let’s look beneath the surface.",
+    story:
+      "Mama Soursop grew in warm gardens where people share fruit from the same tree. She learned to look under leaves, under stories, and under first answers. She is Little Seed’s storyteller — never a lecturer.",
     relationships: {
       "little-seed": "Guide and listener",
       "grandma-soil": "Shares old garden stories",
@@ -65,6 +69,8 @@ export const characters: CharacterRecord[] = [
     visualPrompt:
       "Playful banana character with sugar spots, big grin, springy integrated limbs, natural peel texture.",
     catchphrase: "Count it, bounce it, try it again!",
+    story:
+      "Benny Banana learned to count by bouncing. If a number falls over, Benny tries again with a laugh. Little Seed practises 1 to 10 with Benny so growing has a beat.",
     relationships: {
       "little-seed": "Counting partner",
       "mango-mansa": "Dance-and-song duo",
@@ -90,6 +96,8 @@ export const characters: CharacterRecord[] = [
     visualPrompt:
       "Adventurous mango musician with golden skin, blush, leaf satchel, friendly eyes, integrated limbs.",
     catchphrase: "The world is one orchard — listen!",
+    story:
+      "Mango Mansa carries songs the way mangoes travelled with people: from South Asia across the tropics, including Caribbean kitchens. Music is how Mansa maps the world.",
     relationships: {
       "benny-banana": "Performs together",
       "mama-soursop": "Brings songs after investigations",
@@ -115,6 +123,8 @@ export const characters: CharacterRecord[] = [
     visualPrompt:
       "Gentle soil-mound elder with kind eyes, moss and leaf flecks, root-like limbs, never grotesque.",
     catchphrase: "What you cannot see still holds you.",
+    story:
+      "Grandma Soil is the first home. She remembers rain years and dry years. She taught Little Seed that slow is still growing, and that kindness can be quiet.",
     relationships: {
       "little-seed": "First home and first teacher",
       "wally-water": "Partners in every garden",
@@ -140,6 +150,8 @@ export const characters: CharacterRecord[] = [
     visualPrompt:
       "Playful rounded water droplet with a joyful face, splash-like limbs, dew-on-leaf setting.",
     catchphrase: "Round I go — rain, root, river, again!",
+    story:
+      "Wally Water Drop goes round and round: cloud, rain, root, river, cloud. Wally woke Little Seed with a sip, not a flood. Too much help can still be unkind.",
     relationships: {
       "ray-sunshine": "Makes weather together",
       "grandma-soil": "Soaks in, never washes away the story",
@@ -165,6 +177,8 @@ export const characters: CharacterRecord[] = [
     visualPrompt:
       "Gentle sun-disk character with soft rays, kind face, small light-limbs, garden sunrise, not a religious icon.",
     catchphrase: "I share the day. You share the growing.",
+    story:
+      "Ray of Sunshine shares the day. Ray called Little Seed’s sprout upward after the root had gone down. Light is patient. Growing food needs that gift in the right amount.",
     relationships: {
       "little-seed": "Calls the sprout upward",
       "mango-mansa": "Keeps time for songs",

@@ -21,6 +21,12 @@ function CharacterPage() {
           <blockquote className="mt-4 border-l-4 border-primary pl-4 font-display text-xl italic">
             {c.catchphrase}
           </blockquote>
+          <h2 className="mt-8 font-display text-2xl">Story</h2>
+          {c.story.split("\n\n").map((p) => (
+            <p key={p.slice(0, 40)} className="mt-3 text-muted">
+              {p}
+            </p>
+          ))}
         </div>
       </div>
       <dl className="mt-8 space-y-5">

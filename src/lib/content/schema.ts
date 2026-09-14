@@ -63,6 +63,7 @@ export interface CharacterRecord {
   textures: string;
   visualPrompt: string;
   catchphrase: string;
+  story: string;
   relationships: Record<string, string>;
   accessibilityDescription: string;
   animationStates: string[];
@@ -121,6 +122,7 @@ export interface SongRecord {
   danceSteps: string[];
   durationSec: number;
   relatedEpisode?: string;
+  audioUrl?: string;
 }
 
 export interface EpisodeRecord {
