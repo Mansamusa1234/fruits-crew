@@ -5,6 +5,7 @@ import { animals } from "@/lib/content/animals";
 import { characters } from "@/lib/content/characters";
 import { plants } from "@/lib/content/plants";
 import { songs } from "@/lib/content/songs";
+import { TalkingWorld } from "@/components/world/TalkingWorld";
 
 export const Route = createFileRoute("/")({ component: Home });
 
@@ -43,8 +44,10 @@ function Home() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-6xl px-4 py-12">
-        <div className="rounded-[28px] bg-white p-6 shadow-soft sm:p-8">
+      <TalkingWorld />
+
+      <section className="mx-auto max-w-6xl px-4 py-10">
+        <div className="rounded-[32px] bg-lime/30 p-6 sm:p-8">
           <p className="text-sm font-semibold uppercase tracking-[0.2em] text-leaf">From a seed</p>
           <h2 className="mt-2 font-display text-3xl">God made living things with seed</h2>
           <p className="mt-3 max-w-2xl text-lg text-muted">
@@ -98,9 +101,9 @@ function Home() {
               key={c.slug}
               to="/crew/$slug"
               params={{ slug: c.slug }}
-              className="overflow-hidden rounded-[24px] bg-white shadow-soft"
+              className="kid-card overflow-hidden rounded-[28px] bg-white shadow-soft"
             >
-              <img src={c.portrait} alt={c.accessibilityDescription} className="aspect-square w-full object-cover" />
+              <img src={c.portrait} alt={c.accessibilityDescription} className="aspect-square w-full object-cover bob" />
               <div className="p-3">
                 <h3 className="font-display text-lg">{c.name}</h3>
               </div>
@@ -122,7 +125,7 @@ function Home() {
               key={s.slug}
               to="/sing/$slug"
               params={{ slug: s.slug }}
-              className="overflow-hidden rounded-[24px] bg-white shadow-soft"
+              className="kid-card overflow-hidden rounded-[28px] bg-white shadow-soft"
             >
               {s.poster ? (
                 <img src={s.poster} alt="" className="aspect-video w-full object-cover" />
@@ -170,7 +173,7 @@ function Home() {
               key={p.slug}
               to="/plants/$slug"
               params={{ slug: p.slug }}
-              className="rounded-[20px] bg-white p-4 shadow-soft"
+              className="kid-card rounded-[24px] bg-banana p-4"
             >
               <h3 className="font-display text-xl">{p.commonName}</h3>
               <p className="text-sm italic text-muted">{p.scientificName}</p>
@@ -191,12 +194,15 @@ function Home() {
           oceans, rivers, soil and sky — each one connected to the plants.
         </p>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
-          {animals.slice(0, 8).map((a) => (
+          {["honeybee", "monarch", "earthworm", "atlantic-salmon", "blue-whale", "clownfish", "toucan", "frog"]
+            .map((slug) => animals.find((a) => a.slug === slug))
+            .filter((a): a is NonNullable<typeof a> => Boolean(a))
+            .map((a) => (
             <Link
               key={a.slug}
               to="/animals/$slug"
               params={{ slug: a.slug }}
-              className="rounded-[20px] bg-white p-4 shadow-soft"
+              className="kid-card rounded-[24px] bg-white p-4"
             >
               <p className="text-xs uppercase tracking-wide text-subtle">{a.kind}</p>
               <h3 className="font-display text-xl">{a.commonName}</h3>

@@ -52,6 +52,10 @@
     font-family: var(--font-sans);
     line-height: 1.55;
     background-color: #fff8e8;
+    background-image:
+      radial-gradient(circle at 12% 8%, #ffe566 0, transparent 28%),
+      radial-gradient(circle at 88% 12%, #65d126 0, transparent 24%),
+      radial-gradient(circle at 70% 90%, #00b4d8 0, transparent 26%);
   }
 
   h1,
@@ -177,6 +181,17 @@
   }
 }
 
+@keyframes farm-rain {
+  from {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+  to {
+    transform: translateY(120%);
+    opacity: 0;
+  }
+}
+
 .farm-wash {
   position: absolute;
   inset: 0;
@@ -194,33 +209,163 @@
   transition: background 900ms ease;
 }
 
-.farm-chip {
-  border-radius: 999px;
-  border: 1px solid rgb(255 255 255 / 0.28);
-  background: rgb(0 0 0 / 0.28);
-  color: white;
-  padding: 0.4rem 0.85rem;
-  font-size: 0.8rem;
-  font-weight: 600;
+.living-sky {
+  pointer-events: none;
+  position: fixed;
+  inset: 0;
+  z-index: 30;
+  overflow: hidden;
 }
 
-.farm-chip[aria-pressed="true"] {
-  background: white;
-  color: #2c2416;
+.sky-bee,
+.sky-butterfly {
+  position: absolute;
+  will-change: transform;
 }
 
-@keyframes farm-rain {
-  to {
-    transform: translateY(140%);
+.sky-bee {
+  animation: bee-path 14s linear infinite;
+}
+
+.sky-bee:nth-child(2) {
+  animation-duration: 18s;
+  animation-delay: -4s;
+}
+
+.sky-bee:nth-child(3) {
+  animation-duration: 12s;
+  animation-delay: -8s;
+}
+
+.sky-butterfly {
+  animation: butterfly-path 16s ease-in-out infinite;
+}
+
+.sky-butterfly:nth-child(5) {
+  animation-duration: 22s;
+  animation-delay: -6s;
+}
+
+.talk-bubble {
+  animation: talk-pop 5s ease-in-out infinite;
+}
+
+.bob {
+  animation: bob 2.4s ease-in-out infinite;
+}
+
+.wiggle {
+  animation: wiggle 1.8s ease-in-out infinite;
+}
+
+.kid-card {
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.kid-card:hover,
+.kid-card:focus-visible {
+  transform: translateY(-6px) rotate(-1deg) scale(1.03);
+}
+
+@keyframes bee-path {
+  0% {
+    transform: translate(-10vw, 12vh);
+  }
+  25% {
+    transform: translate(30vw, 8vh) rotate(8deg);
+  }
+  50% {
+    transform: translate(70vw, 18vh) rotate(-6deg);
+  }
+  75% {
+    transform: translate(95vw, 6vh);
+  }
+  100% {
+    transform: translate(110vw, 14vh);
   }
 }
 
+@keyframes butterfly-path {
+  0% {
+    transform: translate(110vw, 28vh);
+  }
+  35% {
+    transform: translate(60vw, 10vh) rotate(-12deg);
+  }
+  70% {
+    transform: translate(20vw, 22vh) rotate(10deg);
+  }
+  100% {
+    transform: translate(-15vw, 8vh);
+  }
+}
+
+@keyframes bob {
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes wiggle {
+  25% {
+    transform: rotate(-6deg);
+  }
+  75% {
+    transform: rotate(6deg);
+  }
+}
+
+@keyframes talk-pop {
+  0%,
+  18% {
+    opacity: 0;
+    transform: scale(0.8) translateY(8px);
+  }
+  28%,
+  72% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+  88%,
+  100% {
+    opacity: 0;
+    transform: scale(0.9) translateY(-6px);
+  }
+}
+
+@keyframes pollen {
+  from {
+    transform: translateY(0);
+    opacity: 0.7;
+  }
+  to {
+    transform: translateY(-110vh);
+    opacity: 0;
+  }
+}
+
+.pollen {
+  position: absolute;
+  bottom: -10px;
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: #ffe566;
+  animation: pollen 11s linear infinite;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+  .living-sky,
+  .sky-bee,
+  .sky-butterfly,
+  .talk-bubble,
+  .bob,
+  .wiggle,
+  .pollen,
+  .fruit-stripe,
+  .farm-bee,
+  .farm-sun,
+  .farm-grow {
+    animation: none !important;
   }
 }

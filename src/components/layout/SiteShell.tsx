@@ -3,16 +3,16 @@ import { Facebook, Instagram, Leaf, Menu, Search, Youtube, X } from "lucide-reac
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LanguagePicker } from "@/components/i18n/LanguagePicker";
+import { LivingSky } from "@/components/world/LivingSky";
 import { cn } from "@/lib/cn";
 import { useLanguage } from "@/lib/i18n";
 
 const NAV = [
-  { to: "/about", key: "navAbout" },
-  { to: "/crew", key: "navCrew" },
   { to: "/watch", key: "navWatch" },
   { to: "/sing", key: "navSing" },
   { to: "/farm", key: "navFarm" },
   { to: "/animals", key: "navAnimals" },
+  { to: "/crew", key: "navCrew" },
   { to: "/plants", key: "navPlants" },
   { to: "/parents", key: "navParents" },
 ] as const;
@@ -39,6 +39,7 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-dvh flex-col bg-transparent text-fg">
+      <LivingSky />
       <a
         href="#main"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-full focus:bg-bg-elevated focus:px-4 focus:py-2"
