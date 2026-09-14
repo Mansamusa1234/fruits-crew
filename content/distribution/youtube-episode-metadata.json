@@ -1,0 +1,33 @@
+{
+  "brand": "Fruits Crew",
+  "creator": "Darren-neil",
+  "episodes": [
+    {
+      "slug": "wake-up-little-seed",
+      "youtubeTitle": "Wake Up, Little Seed! | Fruits Crew story and song",
+      "tags": [
+        "Fruits Crew",
+        "kids songs original",
+        "seed germination for kids",
+        "family learning",
+        "nature songs for children"
+      ]
+    },
+    {
+      "slug": "everything-is-connected",
+      "youtubeTitle": "Everything Is Connected | Fruits Crew original song"
+    },
+    {
+      "slug": "count-the-mangoes",
+      "youtubeTitle": "Count the Mangoes | Fruits Crew original song"
+    },
+    {
+      "slug": "rain-sun-grow",
+      "youtubeTitle": "Rain, Sun, Grow | Fruits Crew original song"
+    },
+    {
+      "slug": "roots-hold-hands",
+      "youtubeTitle": "Roots Hold Hands | Fruits Crew original song"
+    }
+  ]
+}

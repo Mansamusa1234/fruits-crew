@@ -93,12 +93,18 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             </p>
           </div>
           <div className="text-sm">
-            <p className="font-semibold">Safety and privacy</p>
+            <p className="font-semibold">Family and safety</p>
             <Link to="/parents" className="mt-2 block text-primary-fg/80 underline">
               Child safety and parent notes
             </Link>
+            <Link to="/schools" className="mt-2 block text-primary-fg/80 underline">
+              Schools and libraries
+            </Link>
             <Link to="/studio" className="mt-2 block text-primary-fg/80 underline">
-              Production board
+              Studio and launch kit
+            </Link>
+            <Link to="/press" className="mt-2 block text-primary-fg/80 underline">
+              Press and brand
             </Link>
           </div>
           <p className="text-xs text-primary-fg/70">

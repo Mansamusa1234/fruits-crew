@@ -15,17 +15,24 @@ Caribbean culture is one part of a global world, alongside African, British, Asi
 
 Original characters and lyrics. Not a copy of any other children’s brand.
 
-## In this working release
+## Working product
 
 - Home (worldwide living universe)
-- Meet the Crew (7 characters)
+- Meet the Crew
 - Plant explorer and world map
-- Pilot episode: *Wake Up, Little Seed!*
-- Songs and karaoke
+- Pilot episode and karaoke songs
 - Family activities
 - Parent safety notes
-- CapCut production board
+- Schools and libraries lessons
+- Studio / CapCut / YouTube launch kit
+- Press and brand copy
 - Child-safe search
+
+## Marketing files
+
+See `content/distribution/` for YouTube paste packs, school lessons, press boilerplate and the CapCut workflow.
+
+In the app: `/studio`, `/press`, `/schools`.
 
 ## Safety
 
@@ -34,3 +41,7 @@ Original characters and lyrics. Not a copy of any other children’s brand.
 - No products sold to children here
 - Wild plants: never eat unless a knowledgeable adult has identified them
 - Pretend money only
+
+## GitHub
+
+https://github.com/Mansamusa1234/fruits-crew

@@ -13,6 +13,8 @@ import { Route as IndexRouteImport } from './routes/index'
 import { Route as FamilyRouteImport } from './routes/family'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as ParentsRouteImport } from './routes/parents'
+import { Route as PressRouteImport } from './routes/press'
+import { Route as SchoolsRouteImport } from './routes/schools'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as StudioRouteImport } from './routes/studio'
 import { Route as CrewIndexRouteImport } from './routes/crew/index'
@@ -42,6 +44,16 @@ const MapRoute = MapRouteImport.update({
 const ParentsRoute = ParentsRouteImport.update({
   id: '/parents',
   path: '/parents',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PressRoute = PressRouteImport.update({
+  id: '/press',
+  path: '/press',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SchoolsRoute = SchoolsRouteImport.update({
+  id: '/schools',
+  path: '/schools',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SearchRoute = SearchRouteImport.update({
@@ -100,6 +112,8 @@ export interface FileRoutesByFullPath {
   '/family': typeof FamilyRoute
   '/map': typeof MapRoute
   '/parents': typeof ParentsRoute
+  '/press': typeof PressRoute
+  '/schools': typeof SchoolsRoute
   '/search': typeof SearchRoute
   '/studio': typeof StudioRoute
   '/crew/$slug': typeof CrewSlugRoute
@@ -116,6 +130,8 @@ export interface FileRoutesByTo {
   '/family': typeof FamilyRoute
   '/map': typeof MapRoute
   '/parents': typeof ParentsRoute
+  '/press': typeof PressRoute
+  '/schools': typeof SchoolsRoute
   '/search': typeof SearchRoute
   '/studio': typeof StudioRoute
   '/crew/$slug': typeof CrewSlugRoute
@@ -133,6 +149,8 @@ export interface FileRoutesById {
   '/family': typeof FamilyRoute
   '/map': typeof MapRoute
   '/parents': typeof ParentsRoute
+  '/press': typeof PressRoute
+  '/schools': typeof SchoolsRoute
   '/search': typeof SearchRoute
   '/studio': typeof StudioRoute
   '/crew/$slug': typeof CrewSlugRoute
@@ -151,6 +169,8 @@ export interface FileRouteTypes {
     | '/family'
     | '/map'
     | '/parents'
+    | '/press'
+    | '/schools'
     | '/search'
     | '/studio'
     | '/crew/$slug'
@@ -167,6 +187,8 @@ export interface FileRouteTypes {
     | '/family'
     | '/map'
     | '/parents'
+    | '/press'
+    | '/schools'
     | '/search'
     | '/studio'
     | '/crew/$slug'
@@ -183,6 +205,8 @@ export interface FileRouteTypes {
     | '/family'
     | '/map'
     | '/parents'
+    | '/press'
+    | '/schools'
     | '/search'
     | '/studio'
     | '/crew/$slug'
@@ -200,6 +224,8 @@ export interface RootRouteChildren {
   FamilyRoute: typeof FamilyRoute
   MapRoute: typeof MapRoute
   ParentsRoute: typeof ParentsRoute
+  PressRoute: typeof PressRoute
+  SchoolsRoute: typeof SchoolsRoute
   SearchRoute: typeof SearchRoute
   StudioRoute: typeof StudioRoute
   CrewSlugRoute: typeof CrewSlugRoute
@@ -240,6 +266,20 @@ declare module '@tanstack/react-router' {
       path: '/parents'
       fullPath: '/parents'
       preLoaderRoute: typeof ParentsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/press': {
+      id: '/press'
+      path: '/press'
+      fullPath: '/press'
+      preLoaderRoute: typeof PressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/schools': {
+      id: '/schools'
+      path: '/schools'
+      fullPath: '/schools'
+      preLoaderRoute: typeof SchoolsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/search': {
@@ -320,6 +360,8 @@ const rootRouteChildren: RootRouteChildren = {
   FamilyRoute: FamilyRoute,
   MapRoute: MapRoute,
   ParentsRoute: ParentsRoute,
+  PressRoute: PressRoute,
+  SchoolsRoute: SchoolsRoute,
   SearchRoute: SearchRoute,
   StudioRoute: StudioRoute,
   CrewSlugRoute: CrewSlugRoute,
