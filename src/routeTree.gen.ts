@@ -10,16 +10,23 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as AboutRouteImport } from './routes/about'
+import { Route as ContactRouteImport } from './routes/contact'
+import { Route as CookiesRouteImport } from './routes/cookies'
 import { Route as FamilyRouteImport } from './routes/family'
+import { Route as FaqRouteImport } from './routes/faq'
 import { Route as FarmRouteImport } from './routes/farm'
 import { Route as LanguagesRouteImport } from './routes/languages'
 import { Route as MapRouteImport } from './routes/map'
 import { Route as ParentsRouteImport } from './routes/parents'
+import { Route as PartnersRouteImport } from './routes/partners'
 import { Route as PressRouteImport } from './routes/press'
+import { Route as PrivacyRouteImport } from './routes/privacy'
 import { Route as SchoolsRouteImport } from './routes/schools'
 import { Route as SearchRouteImport } from './routes/search'
 import { Route as StartRouteImport } from './routes/start'
 import { Route as StudioRouteImport } from './routes/studio'
+import { Route as TermsRouteImport } from './routes/terms'
 import { Route as CrewIndexRouteImport } from './routes/crew/index'
 import { Route as CrewSlugRouteImport } from './routes/crew/$slug'
 import { Route as PlantsIndexRouteImport } from './routes/plants/index'
@@ -34,9 +41,29 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const AboutRoute = AboutRouteImport.update({
+  id: '/about',
+  path: '/about',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const ContactRoute = ContactRouteImport.update({
+  id: '/contact',
+  path: '/contact',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const CookiesRoute = CookiesRouteImport.update({
+  id: '/cookies',
+  path: '/cookies',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const FamilyRoute = FamilyRouteImport.update({
   id: '/family',
   path: '/family',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const FaqRoute = FaqRouteImport.update({
+  id: '/faq',
+  path: '/faq',
   getParentRoute: () => rootRouteImport,
 } as any)
 const FarmRoute = FarmRouteImport.update({
@@ -59,9 +86,19 @@ const ParentsRoute = ParentsRouteImport.update({
   path: '/parents',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PartnersRoute = PartnersRouteImport.update({
+  id: '/partners',
+  path: '/partners',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const PressRoute = PressRouteImport.update({
   id: '/press',
   path: '/press',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PrivacyRoute = PrivacyRouteImport.update({
+  id: '/privacy',
+  path: '/privacy',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SchoolsRoute = SchoolsRouteImport.update({
@@ -82,6 +119,11 @@ const StartRoute = StartRouteImport.update({
 const StudioRoute = StudioRouteImport.update({
   id: '/studio',
   path: '/studio',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TermsRoute = TermsRouteImport.update({
+  id: '/terms',
+  path: '/terms',
   getParentRoute: () => rootRouteImport,
 } as any)
 const CrewIndexRoute = CrewIndexRouteImport.update({
@@ -127,16 +169,23 @@ const WatchSlugRoute = WatchSlugRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/family': typeof FamilyRoute
+  '/faq': typeof FaqRoute
   '/farm': typeof FarmRoute
   '/languages': typeof LanguagesRoute
   '/map': typeof MapRoute
   '/parents': typeof ParentsRoute
+  '/partners': typeof PartnersRoute
   '/press': typeof PressRoute
+  '/privacy': typeof PrivacyRoute
   '/schools': typeof SchoolsRoute
   '/search': typeof SearchRoute
   '/start': typeof StartRoute
   '/studio': typeof StudioRoute
+  '/terms': typeof TermsRoute
   '/crew/$slug': typeof CrewSlugRoute
   '/plants/$slug': typeof PlantsSlugRoute
   '/sing/$slug': typeof SingSlugRoute
@@ -148,16 +197,23 @@ export interface FileRoutesByFullPath {
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/family': typeof FamilyRoute
+  '/faq': typeof FaqRoute
   '/farm': typeof FarmRoute
   '/languages': typeof LanguagesRoute
   '/map': typeof MapRoute
   '/parents': typeof ParentsRoute
+  '/partners': typeof PartnersRoute
   '/press': typeof PressRoute
+  '/privacy': typeof PrivacyRoute
   '/schools': typeof SchoolsRoute
   '/search': typeof SearchRoute
   '/start': typeof StartRoute
   '/studio': typeof StudioRoute
+  '/terms': typeof TermsRoute
   '/crew/$slug': typeof CrewSlugRoute
   '/plants/$slug': typeof PlantsSlugRoute
   '/sing/$slug': typeof SingSlugRoute
@@ -170,16 +226,23 @@ export interface FileRoutesByTo {
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/about': typeof AboutRoute
+  '/contact': typeof ContactRoute
+  '/cookies': typeof CookiesRoute
   '/family': typeof FamilyRoute
+  '/faq': typeof FaqRoute
   '/farm': typeof FarmRoute
   '/languages': typeof LanguagesRoute
   '/map': typeof MapRoute
   '/parents': typeof ParentsRoute
+  '/partners': typeof PartnersRoute
   '/press': typeof PressRoute
+  '/privacy': typeof PrivacyRoute
   '/schools': typeof SchoolsRoute
   '/search': typeof SearchRoute
   '/start': typeof StartRoute
   '/studio': typeof StudioRoute
+  '/terms': typeof TermsRoute
   '/crew/$slug': typeof CrewSlugRoute
   '/plants/$slug': typeof PlantsSlugRoute
   '/sing/$slug': typeof SingSlugRoute
@@ -193,16 +256,23 @@ export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
   fullPaths:
     | '/'
+    | '/about'
+    | '/contact'
+    | '/cookies'
     | '/family'
+    | '/faq'
     | '/farm'
     | '/languages'
     | '/map'
     | '/parents'
+    | '/partners'
     | '/press'
+    | '/privacy'
     | '/schools'
     | '/search'
     | '/start'
     | '/studio'
+    | '/terms'
     | '/crew/$slug'
     | '/plants/$slug'
     | '/sing/$slug'
@@ -214,16 +284,23 @@ export interface FileRouteTypes {
   fileRoutesByTo: FileRoutesByTo
   to:
     | '/'
+    | '/about'
+    | '/contact'
+    | '/cookies'
     | '/family'
+    | '/faq'
     | '/farm'
     | '/languages'
     | '/map'
     | '/parents'
+    | '/partners'
     | '/press'
+    | '/privacy'
     | '/schools'
     | '/search'
     | '/start'
     | '/studio'
+    | '/terms'
     | '/crew/$slug'
     | '/plants/$slug'
     | '/sing/$slug'
@@ -235,16 +312,23 @@ export interface FileRouteTypes {
   id:
     | '__root__'
     | '/'
+    | '/about'
+    | '/contact'
+    | '/cookies'
     | '/family'
+    | '/faq'
     | '/farm'
     | '/languages'
     | '/map'
     | '/parents'
+    | '/partners'
     | '/press'
+    | '/privacy'
     | '/schools'
     | '/search'
     | '/start'
     | '/studio'
+    | '/terms'
     | '/crew/$slug'
     | '/plants/$slug'
     | '/sing/$slug'
@@ -257,16 +341,23 @@ export interface FileRouteTypes {
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  AboutRoute: typeof AboutRoute
+  ContactRoute: typeof ContactRoute
+  CookiesRoute: typeof CookiesRoute
   FamilyRoute: typeof FamilyRoute
+  FaqRoute: typeof FaqRoute
   FarmRoute: typeof FarmRoute
   LanguagesRoute: typeof LanguagesRoute
   MapRoute: typeof MapRoute
   ParentsRoute: typeof ParentsRoute
+  PartnersRoute: typeof PartnersRoute
   PressRoute: typeof PressRoute
+  PrivacyRoute: typeof PrivacyRoute
   SchoolsRoute: typeof SchoolsRoute
   SearchRoute: typeof SearchRoute
   StartRoute: typeof StartRoute
   StudioRoute: typeof StudioRoute
+  TermsRoute: typeof TermsRoute
   CrewSlugRoute: typeof CrewSlugRoute
   PlantsSlugRoute: typeof PlantsSlugRoute
   SingSlugRoute: typeof SingSlugRoute
@@ -286,11 +377,39 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/about': {
+      id: '/about'
+      path: '/about'
+      fullPath: '/about'
+      preLoaderRoute: typeof AboutRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/contact': {
+      id: '/contact'
+      path: '/contact'
+      fullPath: '/contact'
+      preLoaderRoute: typeof ContactRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/cookies': {
+      id: '/cookies'
+      path: '/cookies'
+      fullPath: '/cookies'
+      preLoaderRoute: typeof CookiesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/family': {
       id: '/family'
       path: '/family'
       fullPath: '/family'
       preLoaderRoute: typeof FamilyRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/faq': {
+      id: '/faq'
+      path: '/faq'
+      fullPath: '/faq'
+      preLoaderRoute: typeof FaqRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/farm': {
@@ -321,11 +440,25 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ParentsRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/partners': {
+      id: '/partners'
+      path: '/partners'
+      fullPath: '/partners'
+      preLoaderRoute: typeof PartnersRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/press': {
       id: '/press'
       path: '/press'
       fullPath: '/press'
       preLoaderRoute: typeof PressRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/privacy': {
+      id: '/privacy'
+      path: '/privacy'
+      fullPath: '/privacy'
+      preLoaderRoute: typeof PrivacyRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/schools': {
@@ -354,6 +487,13 @@ declare module '@tanstack/react-router' {
       path: '/studio'
       fullPath: '/studio'
       preLoaderRoute: typeof StudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/terms': {
+      id: '/terms'
+      path: '/terms'
+      fullPath: '/terms'
+      preLoaderRoute: typeof TermsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/crew/': {
@@ -417,16 +557,23 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  AboutRoute: AboutRoute,
+  ContactRoute: ContactRoute,
+  CookiesRoute: CookiesRoute,
   FamilyRoute: FamilyRoute,
+  FaqRoute: FaqRoute,
   FarmRoute: FarmRoute,
   LanguagesRoute: LanguagesRoute,
   MapRoute: MapRoute,
   ParentsRoute: ParentsRoute,
+  PartnersRoute: PartnersRoute,
   PressRoute: PressRoute,
+  PrivacyRoute: PrivacyRoute,
   SchoolsRoute: SchoolsRoute,
   SearchRoute: SearchRoute,
   StartRoute: StartRoute,
   StudioRoute: StudioRoute,
+  TermsRoute: TermsRoute,
   CrewSlugRoute: CrewSlugRoute,
   PlantsSlugRoute: PlantsSlugRoute,
   SingSlugRoute: SingSlugRoute,

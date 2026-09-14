@@ -1,5 +1,5 @@
 import { Link, useRouterState } from "@tanstack/react-router";
-import { Leaf, Menu, Search, X } from "lucide-react";
+import { Facebook, Instagram, Leaf, Menu, Search, Youtube, X } from "lucide-react";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { LanguagePicker } from "@/components/i18n/LanguagePicker";
@@ -7,16 +7,26 @@ import { cn } from "@/lib/cn";
 import { useLanguage } from "@/lib/i18n";
 
 const NAV = [
-  { to: "/start", key: "navStart" },
-  { to: "/farm", key: "navFarm" },
+  { to: "/about", key: "navAbout" },
   { to: "/crew", key: "navCrew" },
-  { to: "/plants", key: "navPlants" },
-  { to: "/languages", key: "navLanguages" },
   { to: "/watch", key: "navWatch" },
   { to: "/sing", key: "navSing" },
-  { to: "/map", key: "navMap" },
-  { to: "/family", key: "navFamily" },
+  { to: "/farm", key: "navFarm" },
   { to: "/parents", key: "navParents" },
+] as const;
+
+const FOOT_LEFT = [
+  { to: "/about", label: "About" },
+  { to: "/press", label: "Press" },
+  { to: "/partners", label: "Partners" },
+  { to: "/faq", label: "FAQs" },
+] as const;
+
+const FOOT_RIGHT = [
+  { to: "/privacy", label: "Privacy Policy" },
+  { to: "/terms", label: "Terms of Use" },
+  { to: "/cookies", label: "Cookies Policy" },
+  { to: "/contact", label: "Contact" },
 ] as const;
 
 export function SiteShell({ children }: { children: React.ReactNode }) {
@@ -32,11 +42,10 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       >
         Skip to content
       </a>
-      <header className="sticky top-0 z-40 bg-white/85 backdrop-blur-md">
-        <div className="fruit-stripe" aria-hidden />
+      <header className="sticky top-0 z-40 bg-leaf text-white">
         <div className="mx-auto flex max-w-6xl items-center justify-between gap-3 px-4 py-3">
           <Link to="/" className="flex min-h-11 items-center gap-2 font-display text-lg font-semibold tracking-tight">
-            <Leaf className="size-5 text-leaf" aria-hidden />
+            <Leaf className="size-5" aria-hidden />
             Fruits Crew
           </Link>
           <nav className="hidden items-center gap-1 lg:flex" aria-label="Main">
@@ -45,8 +54,8 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
                 key={item.to}
                 to={item.to}
                 className={cn(
-                  "rounded-full px-3 py-2 text-sm font-medium text-muted hover:bg-bg-subtle hover:text-fg",
-                  pathname.startsWith(item.to) && "bg-banana text-fg",
+                  "rounded-full px-3 py-2 text-sm font-medium text-white/85 hover:bg-white/15 hover:text-white",
+                  pathname.startsWith(item.to) && "bg-white/20 text-white",
                 )}
               >
                 {t(item.key)}
@@ -57,14 +66,14 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
             <LanguagePicker />
             <Link
               to="/search"
-              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full hover:bg-bg-subtle"
+              className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full hover:bg-white/15"
               aria-label="Search"
             >
               <Search className="size-5" />
             </Link>
             <Button
               variant="ghost"
-              className="lg:hidden"
+              className="text-white hover:bg-white/15 lg:hidden"
               aria-expanded={open}
               aria-controls="mobile-nav"
               onClick={() => setOpen((v) => !v)}
@@ -75,12 +84,12 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         {open ? (
-          <nav id="mobile-nav" className="grid gap-1 border-t border-border px-4 py-3 lg:hidden" aria-label="Mobile">
+          <nav id="mobile-nav" className="grid gap-1 border-t border-white/20 px-4 py-3 lg:hidden" aria-label="Mobile">
             {NAV.map((item) => (
               <Link
                 key={item.to}
                 to={item.to}
-                className="rounded-2xl px-3 py-3 text-base hover:bg-bg-subtle"
+                className="rounded-2xl px-3 py-3 text-base hover:bg-white/15"
                 onClick={() => setOpen(false)}
               >
                 {t(item.key)}
@@ -92,40 +101,49 @@ export function SiteShell({ children }: { children: React.ReactNode }) {
       <div id="main" className="flex-1">
         {children}
       </div>
-      <footer className="relative overflow-hidden px-4 py-10 text-white">
-        <div className="fruit-stripe" aria-hidden />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#9d174d] via-[#c2410c] to-[#0e7490]" />
-        <div className="relative mx-auto grid max-w-6xl gap-6 sm:grid-cols-3">
+      <footer className="bg-leaf text-white">
+        <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 lg:grid-cols-2">
           <div>
-            <p className="font-display text-xl">Fruits Crew</p>
-            <p className="mt-2 text-sm text-white/85">
-              The whole living world is one family. Everything is connected. Each one teach one.
+            <p className="flex items-center gap-2 font-display text-2xl">
+              <Leaf className="size-6" aria-hidden /> Fruits Crew
             </p>
+            <div className="mt-4 flex gap-3" aria-label="Official channels coming soon">
+              <span className="inline-flex size-10 items-center justify-center rounded-full bg-white/15">
+                <Facebook className="size-5" aria-hidden />
+              </span>
+              <span className="inline-flex size-10 items-center justify-center rounded-full bg-white/15">
+                <Instagram className="size-5" aria-hidden />
+              </span>
+              <span className="inline-flex size-10 items-center justify-center rounded-full bg-white/15">
+                <Youtube className="size-5" aria-hidden />
+              </span>
+            </div>
+            <div className="mt-6 grid grid-cols-2 gap-3 text-sm">
+              <div>
+                {FOOT_LEFT.map((l) => (
+                  <Link key={l.to} to={l.to} className="mt-2 block text-white/90 hover:underline">
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+              <div>
+                {FOOT_RIGHT.map((l) => (
+                  <Link key={l.to} to={l.to} className="mt-2 block text-white/90 hover:underline">
+                    {l.label}
+                  </Link>
+                ))}
+              </div>
+            </div>
           </div>
-          <div className="text-sm">
-            <Link to="/start" className="mt-2 block text-white/85 underline">
-              Start here (beginner)
-            </Link>
-            <Link to="/languages" className="mt-2 block text-white/85 underline">
-              Languages
-            </Link>
-            <Link to="/parents" className="mt-2 block text-white/85 underline">
-              Child safety and parent notes
-            </Link>
-            <Link to="/schools" className="mt-2 block text-white/85 underline">
-              Schools and libraries
-            </Link>
-            <Link to="/studio" className="mt-2 block text-white/85 underline">
-              Studio and launch kit
-            </Link>
-            <Link to="/press" className="mt-2 block text-white/85 underline">
-              Press and brand
-            </Link>
-          </div>
-          <p className="text-xs text-white/75">
-            Created by Darren-neil. Original characters, songs and stories. No behavioural
-            advertising. No products sold to children on this site.
-          </p>
+          <img
+            src="/scenes/footer-crew.jpg"
+            alt="Original Fruits Crew fruit characters together"
+            className="w-full rounded-[24px] object-cover"
+          />
+        </div>
+        <div className="border-t border-white/20 px-4 py-4 text-center text-xs text-white/80">
+          © 2026 Darren-neil. Fruits Crew. Original characters, songs and stories. This website is
+          designed for parents and guardians.
         </div>
       </footer>
     </div>
