@@ -71,10 +71,21 @@ export interface CharacterRecord {
   ageBands: AgeBand[];
 }
 
+export type PlantKind =
+  | "fruit"
+  | "vegetable"
+  | "herb"
+  | "grain"
+  | "nut"
+  | "legume"
+  | "spice"
+  | "wild";
+
 export interface PlantRecord {
   slug: string;
   commonName: string;
   scientificName: string;
+  kind: PlantKind;
   indigenousAndHistoricalNames: string[];
   botanicalOrigin: string;
   presentGrowingRegions: string[];

@@ -142,8 +142,8 @@ function Home() {
       <section className="mx-auto max-w-6xl px-4 pb-14">
         <div className="mb-6 flex items-end justify-between">
           <h2 className="font-display text-3xl">Around the world</h2>
-          <Link to="/map" className="text-sm font-semibold text-primary">
-            Open the map
+          <Link to="/plants" className="text-sm font-semibold text-primary">
+            {plants.length}+ plants
           </Link>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">

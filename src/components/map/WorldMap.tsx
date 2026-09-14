@@ -9,12 +9,18 @@ const PINS: { id: string; cx: number; cy: number }[] = [
   { id: "horn-of-africa", cx: 58, cy: 50 },
   { id: "south-asia", cx: 68, cy: 44 },
   { id: "southeast-asia", cx: 78, cy: 50 },
+  { id: "east-asia", cx: 82, cy: 38 },
   { id: "pacific", cx: 88, cy: 58 },
   { id: "amazon", cx: 32, cy: 62 },
   { id: "andes", cx: 30, cy: 70 },
+  { id: "mesoamerica", cx: 20, cy: 48 },
   { id: "north-america", cx: 22, cy: 36 },
+  { id: "mediterranean", cx: 50, cy: 36 },
+  { id: "middle-east", cx: 58, cy: 40 },
   { id: "britain", cx: 47, cy: 32 },
   { id: "central-asia", cx: 66, cy: 34 },
+  { id: "southern-africa", cx: 52, cy: 68 },
+  { id: "australia", cx: 86, cy: 68 },
 ];
 
 export function WorldMap() {

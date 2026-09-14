@@ -1,4 +1,5 @@
-import type { PlantRecord } from "./schema";
+import type { PlantKind, PlantRecord } from "./schema";
+import { catalogPlants } from "./plants-catalog";
 
 const kew = (name: string, url: string): PlantRecord["claims"][number]["sources"][0] => ({
   title: name,
@@ -7,7 +8,7 @@ const kew = (name: string, url: string): PlantRecord["claims"][number]["sources"
   accessed: "2026-09-14",
 });
 
-export const plants: PlantRecord[] = [
+const featured: Omit<PlantRecord, "kind">[] = [
   {
     slug: "soursop",
     commonName: "Soursop",
@@ -635,18 +636,46 @@ export const plants: PlantRecord[] = [
   },
 ];
 
+const KIND: Record<string, PlantKind> = {
+  soursop: "fruit",
+  banana: "fruit",
+  mango: "fruit",
+  coconut: "nut",
+  ackee: "fruit",
+  cacao: "fruit",
+  yam: "vegetable",
+  teff: "grain",
+  dandelion: "wild",
+  rice: "grain",
+  potato: "vegetable",
+  sunflower: "nut",
+  breadfruit: "fruit",
+  apple: "fruit",
+};
+
+export const plants: PlantRecord[] = [
+  ...featured.map((p) => ({ ...p, kind: KIND[p.slug] ?? ("fruit" as PlantKind) })),
+  ...catalogPlants.filter((p) => !featured.some((f) => f.slug === p.slug)),
+];
+
 export const mapRegions = [
   { id: "caribbean", name: "Caribbean", blurb: "Home gardens of soursop, mango, ackee and breadfruit." },
   { id: "west-africa", name: "West Africa", blurb: "Yams, African rice, and the origin of ackee." },
   { id: "horn-of-africa", name: "Horn of Africa", blurb: "Highland teff and injera culture." },
   { id: "south-asia", name: "South Asia", blurb: "Mango’s botanical home." },
   { id: "southeast-asia", name: "Southeast Asia", blurb: "Where bananas were first domesticated." },
+  { id: "east-asia", name: "East Asia", blurb: "Citrus, soy, tea, and peach family crops." },
   { id: "pacific", name: "Pacific", blurb: "Coconut coasts and breadfruit groves." },
   { id: "amazon", name: "Amazon / tropical Americas", blurb: "Cacao’s wild family." },
   { id: "andes", name: "Andes", blurb: "Potato’s mountain origin." },
+  { id: "mesoamerica", name: "Mesoamerica", blurb: "Maize, beans, squash, chilli and tomato." },
   { id: "north-america", name: "North America", blurb: "Sunflower, an Indigenous domesticate." },
+  { id: "mediterranean", name: "Mediterranean", blurb: "Olive, grape, fig and wheat coasts." },
+  { id: "middle-east", name: "West Asia / Fertile Crescent", blurb: "Wheat, barley, lentil, date and fig." },
   { id: "britain", name: "Britain & temperate Europe", blurb: "Dandelion meadows and hedgerow plants." },
   { id: "central-asia", name: "Central Asia", blurb: "Wild apple forests." },
+  { id: "southern-africa", name: "Southern Africa", blurb: "Sorghum, melon relatives and local greens." },
+  { id: "australia", name: "Australia", blurb: "Macadamia and other native food plants." },
 ];
 
 export function getPlant(slug: string) {

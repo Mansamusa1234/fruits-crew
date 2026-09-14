@@ -16,7 +16,7 @@ function PlantPage() {
       <h1 className="mt-4 font-display text-4xl">{p.commonName}</h1>
       <p className="italic text-muted">{p.scientificName}</p>
       <p className="mt-2 text-xs uppercase tracking-wide text-subtle">
-        Evidence labels on each claim · {p.editorialStatus.replaceAll("_", " ")}
+        {p.kind} · Evidence labels on each claim · {p.editorialStatus.replaceAll("_", " ")}
       </p>
       <Section title="Botanical origin">{p.botanicalOrigin}</Section>
       <Section title="Present growing regions">{p.presentGrowingRegions.join(", ")}</Section>
